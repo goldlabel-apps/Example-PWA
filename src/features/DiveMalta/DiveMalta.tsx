@@ -9,19 +9,19 @@ import {
   Grid,
 } from "@mui/material";
 import {
-  selectGPXReact,
+  selectDiveMalta,
   InfiniteMenu,
   Bottombar,
   Topbar,
   Generic,
   Advert,
-} from "../GPXReact";
+} from "../DiveMalta";
 
-export default function GPXReact() {
-  const gpxReact = useFeatureSelect( selectGPXReact );
+export default function DiveMalta() {
+  const diveMalta = useFeatureSelect( selectDiveMalta );
   const location = useLocation();
   const {pathname} = location;
-  const {tracks} = gpxReact;
+  const {tracks} = diveMalta;
   // console.log ("tracks",tracks );
   let track = null;
   let trackPath = pathname;

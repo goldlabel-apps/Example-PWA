@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from "../../featuresStore"
 import {tracks} from "../data/tracks"
 
-export interface GPXReactSlice {
+export interface DiveMaltaSlice {
   error: any
   editing: any
   notifying: any
@@ -13,7 +13,7 @@ export interface GPXReactSlice {
   showInfiniteMenu: boolean
 }
 
-const initialState: GPXReactSlice = {
+const initialState: DiveMaltaSlice = {
   error: null,
   editing: null,
   confirming: null,
@@ -39,7 +39,7 @@ export const gpxreactSlice = createSlice({
         state.editing.item[key] = value;
       }
     },
-    setGPXReactKey: (state, action: PayloadAction<any>) => {
+    setDiveMaltaKey: (state, action: PayloadAction<any>) => {
       const { key, value } = action.payload
       // @ts-ignore
       state[key] = value
@@ -47,9 +47,9 @@ export const gpxreactSlice = createSlice({
   },
 })
 
-export const selectGPXReact = (state: RootState) => state.gpxreact;
+export const selectDiveMalta = (state: RootState) => state.gpxreact;
 export const { 
-  setGPXReactKey,
+  setDiveMaltaKey,
   edit,
 } = gpxreactSlice.actions;
 export default gpxreactSlice.reducer;

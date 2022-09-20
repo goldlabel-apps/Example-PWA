@@ -12,8 +12,8 @@ import {
 import { 
   Shared,
 } from "./features/Shared";
-import {theme} from "./features/GPXReact/theme/theme";
-import {GPXReact} from "./features/GPXReact";
+import {theme} from "./features/DiveMalta/theme/theme";
+import {DiveMalta} from "./features/DiveMalta";
 
 console.warn(`${process.env.REACT_APP_NAME} ${process.env.REACT_APP_VERSION} ${process.env.REACT_APP_ENV}`);
 
@@ -34,7 +34,7 @@ root.render(
               <Switch>
                 <Route 
                   path="**" 
-                  render={({ history }) => <GPXReact /> } />
+                  render={({ history }) => <DiveMalta /> } />
               </Switch>
           </Container>
         </ThemeProvider>

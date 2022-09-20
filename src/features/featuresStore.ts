@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import sharedReducer from '../features/Shared/store/slice'
-import gpxreactReducer from '../features/GPXReact/store/slice'
+import gpxreactReducer from '../features/DiveMalta/store/slice'
 
 export const featuresStore = configureStore({
   reducer: {
