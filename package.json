@@ -1,7 +1,8 @@
 {
-  "name": "gpx-react",
+  "version": "2.4.1",
+  "name": "divemalta",
   "description": "View, Edit & Share Geodata using React & Material UI",
-  "version": "2.4.0",
+  "keywords": ["garmin", "react", "pwa-seo"],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
