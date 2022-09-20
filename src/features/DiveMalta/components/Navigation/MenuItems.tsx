@@ -10,7 +10,7 @@ import {
   ListItemText,
 } from "@mui/material"
 import {Icon} from "../../../Shared";
-import {goTo} from "../../../GPXReact";
+import {goTo} from "../../../DiveMalta";
 
 export default function MenuItems() {
     const dispatch = useFeatureDispatch();

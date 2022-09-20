@@ -14,7 +14,7 @@ import {
 } from "@mui/material"
 import {
   MenuItems,
-} from "../../../GPXReact";
+} from "../../../DiveMalta";
 import {
   Icon,
 } from "../../../Shared";

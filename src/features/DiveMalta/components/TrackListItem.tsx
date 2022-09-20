@@ -20,7 +20,7 @@ import {
 } from "../../Shared";
 import {
   goTo,
-} from "../../GPXReact";
+} from "../../DiveMalta";
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
 }

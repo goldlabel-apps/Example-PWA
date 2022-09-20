@@ -10,7 +10,7 @@
  *~ loaded outside a module loader environment, declare that global here.
  *~ Otherwise, delete this declaration.
  */
- export as namespace gpxReact;
+ export as namespace diveMalta;
 
  export type InfiniteMenuShape = {
   defaultOpen?: boolean;
@@ -21,13 +21,13 @@
  }
 
  /*~ You can declare types that are available via importing the module */
- export interface GPXReact {
+ export interface DiveMalta {
    name: string;
    length: number;
    extras?: string[];
  }
 
- export interface GPXReactTrack {
+ export interface DiveMaltaTrack {
   name: string;
   length: number;
   extras?: string[];

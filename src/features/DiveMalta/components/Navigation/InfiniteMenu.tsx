@@ -8,7 +8,7 @@ import {
 } from "../../../Shared";
 import {
     goTo,
-    selectGPXReact,
+    selectDiveMalta,
 } from "../../";
 import {
     useMediaQuery,
@@ -29,8 +29,8 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
     let open = true;
     let isProd = true;
     const dispatch = useFeatureDispatch();
-    const gpxReact = useFeatureSelect( selectGPXReact );
-    const {tracks} = gpxReact;
+    const diveMalta = useFeatureSelect( selectDiveMalta );
+    const {tracks} = diveMalta;
     // if (showInfiniteMenu) open = showInfiniteMenu;
     
     const host = window.location.host;
