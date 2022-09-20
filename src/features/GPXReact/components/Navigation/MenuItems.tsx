@@ -50,7 +50,7 @@ export default function MenuItems() {
                 dispatch(goTo({
                     renderAs: "external",
                     options: {
-                        url: "https://github.com/listingslab-software/gpx-react"
+                        url: "https://github.com/listingslab-software/divemalta.app"
                     }
                 }));
                 handleMenuClose()
@@ -60,7 +60,7 @@ export default function MenuItems() {
                 </ListItemIcon>
                 <ListItemText>
                     <Typography variant="body2">
-                        Open Source
+                        Free & Open Source
                     </Typography>
                 </ListItemText>
             </MenuItem>
