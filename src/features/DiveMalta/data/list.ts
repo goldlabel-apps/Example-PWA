@@ -29,7 +29,7 @@ const list = [
       uid: "DM_00000asdf21",
       slug: "abcdivingmalta",
       category: "advert",
-      tags: ["Shop"],
+      tags: ["Diveshop"],
       icon: "diveshop",
       title: "ABC Diving",
       excerpt: "",
@@ -161,6 +161,7 @@ const list = [
         category: "Dive Gear",
         image: "/jpg/Decathlon/Decathlon.jpg",
         bodyFormat: "md",
+        tags:["Shopping"],
         body: "> TO SUSTAINABLY MAKE THE PLEASURE AND BENEFITS OF SPORT ACCESSIBLE TO THE MANY",
         links: [
           {

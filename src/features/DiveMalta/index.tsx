@@ -4,6 +4,10 @@ import Bottombar from "./components/Navigation/Bottombar";
 import MenuItems from "./components/Navigation/MenuItems";
 import Topbar from "./components/Navigation/Topbar";
 import MenuListItem from "./components/Types/MenuListItem";
+
+import Category from "./components/Types/Category";
+
+
 import Generic from "./components/Types/Generic";
 import Featured from "./components/Types/Featured";
 import {
@@ -17,6 +21,7 @@ import {share} from "./store/actions/share";
 
 export {
   DiveMalta,
+  Category,
   MenuListItem,
   InfiniteMenu,
   Generic,

@@ -1,73 +1,76 @@
 import * as React from 'react';
 import {
-  // useFeatureSelect,
-  useFeatureDispatch,
+  useFeatureSelect,
 } from "../../../Shared/store/hooks";
-import { styled } from '@mui/material/styles';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-// import ReactMarkdown from 'react-markdown';
-
+import { selectDiveMalta } from '../../';
 import {
-  Box,
+  Grid,
   Card,
   CardHeader,
-  CardActions,
   CardMedia,
-  CardContent,
-  Avatar,
+  IconButton,
 } from "@mui/material"
 import {
   Icon,
-  // navigateTo,
 } from "../../../Shared";
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
 export default function Category() {
-  const dispatch = useFeatureDispatch();
-
+  const diveMalta = useFeatureSelect( selectDiveMalta );
+  const {list} = diveMalta;
+  // console.log ("list", list);
+/* 
+let secondaryText = <React.Fragment>
+                          {category ? category.toString() : null}
+                          {tags ? tags.toString() : null}
+                      </React.Fragment>;
+  if(tags && !category){
+      secondaryText = tags.toString();
+  };
+*/
   return (
-    <Box sx={{m:1, width: "100%"}}>
-      <Card sx={{ width: "100%" }}>
-        <CardHeader
-          avatar={<React.Fragment>
-            <Avatar />
-                </React.Fragment>}
+    <Grid container>
 
-          action={ <React.Fragment>
-                    <Icon icon="settings" />
-                  </React.Fragment>}
-          title={ `title` }
-          subheader={`subheader`}
-        />
-
-            <CardMedia
-              component="img"
-              height={ 175 }
-              image={`image`}
-              alt={`title`}
+      { list.map((item: any, i: number) => {
+        // if (i === 1) console.log (item.value);
+        const {
+          icon,
+          title,
+          tags,
+          image,
+        } = item.value;
+        return (
+          <Grid item xs={12} sm={6} key={`item_${i}`}>
+            <Card sx={{ m:0.5, minHeight: 100}}>
+              <CardHeader
+              avatar={<React.Fragment>
+                        <Icon icon={icon} />
+                      </React.Fragment>}
+              title={title}
+              subheader={tags ? tags.toString() : null }
+              action={ <React.Fragment>
+                          <IconButton
+                            color="primary"
+                            onClick={()=>{}}
+                          >
+                            <Icon icon="right" />
+                          </IconButton>
+                        </React.Fragment>}
             />
-        
-          <CardContent>
-          </CardContent>
-          <CardActions>
-            <Icon icon="home" />
-          </CardActions>
-      </Card>
-    </Box>
+            <CardMedia
+                sx={{p:1, cursor: "pointer"}}
+                component="img"
+                height="175"
+                image={image}
+                alt="ABC Diving, Malta"
+                onClick={(e: React.MouseEvent) => {
+                  e.preventDefault();
+                  
+                }}/>
+            </Card>
+          </Grid>
+          );
+      })}      
+    </Grid>
   );
 }
 

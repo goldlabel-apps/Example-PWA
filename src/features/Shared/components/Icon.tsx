@@ -57,6 +57,7 @@ import SupportIcon from "@mui/icons-material/SupportAgent"
 import ArrowRIcon from "@mui/icons-material/ArrowForwardTwoTone"
 import ArrowLIcon from "@mui/icons-material/ArrowBackTwoTone"
 import ArrowUIcon from "@mui/icons-material/ArrowUpwardTwoTone"
+import ArrowDIcon from "@mui/icons-material/ArrowDownwardTwoTone"
 import SearchIcon from "@mui/icons-material/Search"
 import MarkdownIcon from "@mui/icons-material/Article"
 import CalendarIcon from "@mui/icons-material/CalendarToday"
@@ -384,6 +385,9 @@ export default function Icon(props: any) {
     case "up":
       iconFragment = <ArrowUIcon color={color} />
       break
+      case "down":
+        iconFragment = <ArrowDIcon color={color} />
+        break
     case "forward":
       iconFragment = <ArrowRIcon color={color} />
       break
