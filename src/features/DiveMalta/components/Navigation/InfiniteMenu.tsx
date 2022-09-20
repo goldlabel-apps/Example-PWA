@@ -71,9 +71,8 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                 <span style={{marginLeft:8,marginRight:8}}>
                     { open ? `Hide nav` : `Show nav` }
                 </span>
+                { open ? <Icon icon="up" /> : <Icon icon="down" /> }
             </Button> : null }
-            
-
 
             { open ? <Paper>
                 

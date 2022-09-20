@@ -4,7 +4,7 @@ import {
 } from "../Shared/store/hooks";
 import {useLocation} from "react-router-dom";
 import {
-  // useMediaQuery,
+  useMediaQuery,
   Box,
   Grid,
 } from "@mui/material";
@@ -12,6 +12,7 @@ import {
   selectDiveMalta,
   InfiniteMenu,
   Bottombar,
+  Category,
   Topbar,
   Generic,
   Featured,
@@ -19,10 +20,10 @@ import {
 
 export default function DiveMalta() {
   const diveMalta = useFeatureSelect( selectDiveMalta );
+  const isMobile = !useMediaQuery("(min-width:900px)");
   const location = useLocation();
   const {pathname} = location;
   const {list} = diveMalta;
-  // console.log ("list",list );
   let track = null;
   let trackPath = pathname;
   for(let i =0; i < list.length; i++){
@@ -31,18 +32,20 @@ export default function DiveMalta() {
       break;
     }
   }
+
   if(pathname === "/"){
     return (
       <React.Fragment>
         <Topbar />
         <Grid container sx={{mb:5}}>
           <Grid item xs={12} md={4}>  
+            {!isMobile ? null : <InfiniteMenu /> }
             <Featured />
-            <InfiniteMenu defaultOpen />
+            {!isMobile ? <InfiniteMenu /> : null }
           </Grid>
           <Grid item xs={12} md={8}>
             <Box sx={{pr:1}}>
-              Category Page
+              <Category />
             </Box>
           </Grid>
           </Grid>
@@ -54,8 +57,9 @@ export default function DiveMalta() {
             <Topbar />
             <Grid container sx={{mb:10}}>
               <Grid item xs={12} md={4}>
-                <Featured />
-                <InfiniteMenu />
+              {isMobile ? null : <InfiniteMenu /> }
+              <Featured />
+              {!isMobile ? <InfiniteMenu /> : null }
               </Grid>
               <Grid item xs={12} md={8}>
                 <Generic track={track} setMode={"single"} />
