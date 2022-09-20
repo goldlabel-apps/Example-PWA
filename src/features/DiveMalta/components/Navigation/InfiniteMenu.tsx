@@ -36,7 +36,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
     const host = window.location.host;
     if (host !== process.env.REACT_APP_PROD_HOST) isProd = false;
     const isMobile = !useMediaQuery("(min-width:900px)");
-    console.log ("isMobile", isMobile);
+    // console.log ("isMobile", isMobile);
     if(isMobile) open = false;
 
     const handleMenuClick = (slug: string) => {
