@@ -5,7 +5,7 @@ import MenuItems from "./components/Navigation/MenuItems";
 import Topbar from "./components/Navigation/Topbar";
 import MenuListItem from "./components/Types/MenuListItem";
 import Generic from "./components/Types/Generic";
-import Advert from "./components/Types/Advert";
+import Featured from "./components/Types/Featured";
 import {
   selectDiveMalta,
   increaseShowNumber,
@@ -20,7 +20,7 @@ export {
   MenuListItem,
   InfiniteMenu,
   Generic,
-  Advert,
+  Featured,
   Bottombar,
   Topbar,
   MenuItems,

@@ -14,7 +14,7 @@ import {
   Bottombar,
   Topbar,
   Generic,
-  Advert,
+  Featured,
 } from "../DiveMalta";
 
 export default function DiveMalta() {
@@ -37,11 +37,12 @@ export default function DiveMalta() {
         <Topbar />
         <Grid container sx={{mb:5}}>
           <Grid item xs={12} md={4}>  
+            <Featured />
             <InfiniteMenu defaultOpen />
           </Grid>
           <Grid item xs={12} md={8}>
             <Box sx={{pr:1}}>
-              
+              Category Page
             </Box>
           </Grid>
           </Grid>
@@ -49,14 +50,12 @@ export default function DiveMalta() {
       </React.Fragment>
     )
   }
-
   return (<React.Fragment>
             <Topbar />
             <Grid container sx={{mb:10}}>
               <Grid item xs={12} md={4}>
-              <Advert />
-                  <InfiniteMenu />
-                  
+                <Featured />
+                <InfiniteMenu />
               </Grid>
               <Grid item xs={12} md={8}>
                 <Generic track={track} setMode={"single"} />

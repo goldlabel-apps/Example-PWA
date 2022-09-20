@@ -23,11 +23,11 @@ const initialState: DiveMaltaSlice = {
   newItemValue: "",
   list,
   showInfiniteMenu: false,
-  showNumber: 1,
+  showNumber: 5,
 }
 
-export const gpxreactSlice = createSlice({
-  name: 'gpxreact',
+export const divemaltaSlice = createSlice({
+  name: 'divemalta',
   initialState,
   reducers: {
     setDiveMaltaKey: (state, action: PayloadAction<any>) => {
@@ -55,10 +55,10 @@ export const gpxreactSlice = createSlice({
   },
 })
 
-export const selectDiveMalta = (state: RootState) => state.gpxreact;
+export const selectDiveMalta = (state: RootState) => state.divemalta;
 export const { 
   increaseShowNumber,
   setDiveMaltaKey,
   edit,
-} = gpxreactSlice.actions;
-export default gpxreactSlice.reducer;
+} = divemaltaSlice.actions;
+export default divemaltaSlice.reducer;

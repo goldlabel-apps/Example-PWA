@@ -136,13 +136,12 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                             aria-expanded={open ? 'true' : undefined}
                             onClick={(e: React.MouseEvent) => {
                                 e.preventDefault();
-                                // console.log ("increase showNumber", showNumber);
                                 loadMore();
                             }}>
                             <span style={{marginLeft:8,marginRight:8}}>
-                                More
+                                Show more
                             </span>
-                            <Icon icon="right" />
+                            <Icon icon="add" />
                         </Button>
                     </Grid> : null  }
                     
