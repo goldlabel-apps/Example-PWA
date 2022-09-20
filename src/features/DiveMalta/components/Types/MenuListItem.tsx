@@ -36,7 +36,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function TrackListItem(props:any) {
+export default function MenuListItem(props:any) {
   const dispatch = useFeatureDispatch();
   const handleExpandClick = () => setExpanded(!expanded);
   const {track} = props;

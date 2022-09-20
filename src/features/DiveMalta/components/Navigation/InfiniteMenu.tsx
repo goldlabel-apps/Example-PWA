@@ -9,16 +9,20 @@ import {
 import {
     goTo,
     selectDiveMalta,
+    increaseShowNumber,
+    setDiveMaltaKey,
 } from "../../";
 import {
     useMediaQuery,
     Button,
     Box,
+    Grid,
     List,
     Paper,
     MenuItem,
     ListItemText,
     ListItemIcon,
+    Typography,
 } from "@mui/material";
 import {
     InfiniteMenuShape, 
@@ -30,29 +34,28 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
     let isProd = true;
     const dispatch = useFeatureDispatch();
     const diveMalta = useFeatureSelect( selectDiveMalta );
-    const {tracks} = diveMalta;
-    // if (showInfiniteMenu) open = showInfiniteMenu;
-    
+    const {list, showInfiniteMenu, showNumber} = diveMalta;
     const host = window.location.host;
     if (host !== process.env.REACT_APP_PROD_HOST) isProd = false;
     const isMobile = !useMediaQuery("(min-width:900px)");
-    // console.log ("isMobile", isMobile);
     if(isMobile) open = false;
+    if (showInfiniteMenu) open = true;
 
     const handleMenuClick = (slug: string) => {
-        dispatch(goTo({
-            renderAs: "internal",
-            options: {
-              slug,
-              isProd,
-            },
-        }));
+        dispatch(goTo({ renderAs: "internal", options: {slug, isProd }}));
+    };
+
+    const loadMore = () =>{
+        dispatch(increaseShowNumber({by:1, max: list.length}));
+    };
+
+    const menuButtonClick = () => {
+        dispatch(setDiveMaltaKey({key: "showInfiniteMenu", value: !open}));
     };
 
     return (
         <Box sx={{m:0.5}}>
-
-            <Button
+            {isMobile ? <Button
                 fullWidth
                 color="primary"
                 variant="contained"
@@ -62,17 +65,20 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={(e: React.MouseEvent) => {
                     e.preventDefault();
+                    menuButtonClick();
                 }}>
                 <Icon icon="imenu" />
                 <span style={{marginLeft:8,marginRight:8}}>
-                    Menu
+                    { open ? `Hide nav` : `Show nav` }
                 </span>
-            </Button>
+            </Button> : null }
+            
 
 
             { open ? <Paper>
+                
                 <List id="infinite-menu">
-                    { tracks.map((item:WierdShape, i: number) => {
+                    { list.map((item:WierdShape, i: number) => {
                         const {
                             title,
                             icon,
@@ -80,14 +86,12 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                             tags,
                             category,
                         } = item.value;
-                        if (i > 4) return null
+                        if (i >= showNumber) return null
                         let secondaryText = <React.Fragment>
                                                 {category ? category.toString() : null}
-                                                
                                                 {tags ? tags.toString() : null}
                                             </React.Fragment>;
-
-                        if(tags){
+                        if(tags && !category){
                             secondaryText = tags.toString();
                         };
                         return (<MenuItem 
@@ -105,24 +109,48 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                 </MenuItem>);
                     })}
                 </List>
+                
             </Paper> : null }
+            { open ? <React.Fragment>
+
+                
+                <Grid container>
+                    <Grid item xs={6}>
+                        <Typography
+                            variant="body2"
+                            sx={{
+                                color: "white",
+                                p:1,
+                            }}>
+                            Showing {showNumber} of {list.length}
+                        </Typography>
+                    </Grid>
+                    { list.length > showNumber ? <Grid item xs={6}>
+                        <Button
+                            fullWidth
+                            color="primary"
+                            variant="contained"
+                            id="infinite-button"
+                            aria-controls={open ? 'infinite-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            onClick={(e: React.MouseEvent) => {
+                                e.preventDefault();
+                                // console.log ("increase showNumber", showNumber);
+                                loadMore();
+                            }}>
+                            <span style={{marginLeft:8,marginRight:8}}>
+                                More
+                            </span>
+                            <Icon icon="right" />
+                        </Button>
+                    </Grid> : null  }
+                    
+                </Grid>
+                    
+                    
+            </React.Fragment> : null}
             
-            <Button
-                fullWidth
-                color="primary"
-                variant="contained"
-                id="infinite-button"
-                aria-controls={open ? 'infinite-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={(e: React.MouseEvent) => {
-                    e.preventDefault();
-                }}>
-                <Icon icon="imenu" />
-                <span style={{marginLeft:8,marginRight:8}}>
-                    More...
-                </span>
-            </Button>
         </Box>
     );
 }

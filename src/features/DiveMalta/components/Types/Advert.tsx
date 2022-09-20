@@ -13,7 +13,6 @@ import {
 import {Icon} from "../../../Shared";
 
 export default function Advert() {
-  
   return (
     <Card sx={{ width: "100%", m:0.5 }}>
       <CardContent>

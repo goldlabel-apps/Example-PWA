@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from "../../featuresStore"
-import {tracks} from "../data/tracks"
+import {list} from "../data/list"
 
 export interface DiveMaltaSlice {
   error: any
@@ -9,8 +9,9 @@ export interface DiveMaltaSlice {
   confirming: any
   newItem: any
   newItemValue: string
-  tracks: any
+  list: any
   showInfiniteMenu: boolean
+  showNumber: number
 }
 
 const initialState: DiveMaltaSlice = {
@@ -20,14 +21,20 @@ const initialState: DiveMaltaSlice = {
   notifying: null,
   newItem: null,
   newItemValue: "",
-  tracks,
-  showInfiniteMenu: true,
+  list,
+  showInfiniteMenu: false,
+  showNumber: 1,
 }
 
 export const gpxreactSlice = createSlice({
   name: 'gpxreact',
   initialState,
   reducers: {
+    setDiveMaltaKey: (state, action: PayloadAction<any>) => {
+      const { key, value } = action.payload
+      // @ts-ignore
+      state[key] = value;
+    },
     edit: (state, action: PayloadAction<any>) => {
       const { key, value, subKey } = action.payload;
       state.editing.pristine = false;
@@ -39,16 +46,18 @@ export const gpxreactSlice = createSlice({
         state.editing.item[key] = value;
       }
     },
-    setDiveMaltaKey: (state, action: PayloadAction<any>) => {
-      const { key, value } = action.payload
-      // @ts-ignore
-      state[key] = value
+    increaseShowNumber: (state, action: PayloadAction<any>) => {
+      const { by, max } = action.payload;
+      let newShowNumber = state.showNumber + by;
+      if (newShowNumber >= max) newShowNumber = max;
+      state.showNumber = newShowNumber;
     },
   },
 })
 
 export const selectDiveMalta = (state: RootState) => state.gpxreact;
 export const { 
+  increaseShowNumber,
   setDiveMaltaKey,
   edit,
 } = gpxreactSlice.actions;

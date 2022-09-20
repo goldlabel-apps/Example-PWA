@@ -2,7 +2,7 @@ import {mdBody_Rozi} from "./md/mdBody_Rozi";
 import {mdBody_DiveGuide} from "./md/mdBody_DiveGuide";
 import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
 
-const tracks = [
+const list = [
   { 
     value: {
       uid: "ABC_000000001",
@@ -173,4 +173,4 @@ const tracks = [
        
   ]
 
-export { tracks }
+export { list }

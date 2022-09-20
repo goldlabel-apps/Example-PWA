@@ -21,13 +21,13 @@ export default function DiveMalta() {
   const diveMalta = useFeatureSelect( selectDiveMalta );
   const location = useLocation();
   const {pathname} = location;
-  const {tracks} = diveMalta;
-  // console.log ("tracks",tracks );
+  const {list} = diveMalta;
+  // console.log ("list",list );
   let track = null;
   let trackPath = pathname;
-  for(let i =0; i < tracks.length; i++){
-    if (trackPath.slice(1,trackPath.length) === tracks[i].value.slug){
-      track = tracks[i];
+  for(let i =0; i < list.length; i++){
+    if (trackPath.slice(1,trackPath.length) === list[i].value.slug){
+      track = list[i];
       break;
     }
   }
@@ -41,7 +41,7 @@ export default function DiveMalta() {
           </Grid>
           <Grid item xs={12} md={8}>
             <Box sx={{pr:1}}>
-              <Advert />
+              
             </Box>
           </Grid>
           </Grid>
@@ -54,7 +54,9 @@ export default function DiveMalta() {
             <Topbar />
             <Grid container sx={{mb:10}}>
               <Grid item xs={12} md={4}>
+              <Advert />
                   <InfiniteMenu />
+                  
               </Grid>
               <Grid item xs={12} md={8}>
                 <Generic track={track} setMode={"single"} />
