@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   useFeatureDispatch,
-} from "../../Shared/store/hooks";
+} from "../../../Shared/store/hooks";
 import { styled } from '@mui/material/styles';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import {
@@ -17,10 +17,10 @@ import {
 } from "@mui/material"
 import {
   Icon,
-} from "../../Shared";
+} from "../../../Shared";
 import {
   goTo,
-} from "../../DiveMalta";
+} from "../../../DiveMalta";
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
 }

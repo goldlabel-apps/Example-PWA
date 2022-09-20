@@ -9,7 +9,9 @@ export const goTo = (payload: any): AppThunk => async (dispatch: any) => {
       window.open(url, "_blank");
     }
     if(renderAs === "internal"){
-      window.open(slug, "_self");
+      // window.open(slug, "_self");
+      console.log("renderAs", renderAs);
+      console.log("slug", slug);
     }
     if (category){
       dispatch(setSharedKey({ key: 'notifying', value: {
