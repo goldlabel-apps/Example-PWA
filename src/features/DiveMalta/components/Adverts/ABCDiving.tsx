@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import {Icon} from "../../../Shared";
 
-export default function Advert() {
+export default function ABCDiving() {
   return (
     <Card sx={{ width: "100%", m:0.5 }}>
       <CardContent>
@@ -23,7 +23,6 @@ export default function Advert() {
         <Typography variant="h5" component="div">
           ABC Diving, Malta
         </Typography>
-        
 
         <Grid container>
 
