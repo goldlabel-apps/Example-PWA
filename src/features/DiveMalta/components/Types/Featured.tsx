@@ -39,7 +39,7 @@ export default function Featured() {
             </React.Fragment>}
         action={<React.Fragment>
           <IconButton
-            color="secondary"
+            color="primary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
               window.open("https://api.whatsapp.com/send?phone=35677333112&text=%F0%9F%9A%80", "_blank");
@@ -47,7 +47,7 @@ export default function Featured() {
               <Icon icon="whatsapp"/>
           </IconButton>
           <IconButton 
-            color="secondary"
+            color="primary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
               window.open("mailto:info@abcdivingmalta.com", "_blank");
@@ -55,7 +55,7 @@ export default function Featured() {
               <Icon icon="email"/>
           </IconButton>
           <IconButton 
-            color="secondary"
+            color="primary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
               window.open("https://www.abcdivingmalta.com", "_blank");

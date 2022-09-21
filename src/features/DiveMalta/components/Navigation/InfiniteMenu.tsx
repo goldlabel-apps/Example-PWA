@@ -101,21 +101,26 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                         })}
                     </List>
                     {open ? <React.Fragment>
-                                { list.length > showNumber ? <CardContent><Button
+                                { list.length > showNumber ? <CardContent>
+                                
+                                <Button
                                     id="infinite-button"
                                     fullWidth
-                                    variant="contained"
+                                    variant="text"
                                     color="primary"
                                     onClick={(e: React.MouseEvent) => {
                                         e.preventDefault();
                                         loadMore();
                                     }}>
-                                    <span style={{marginLeft: "8px", marginRight: "8px", textTransform:"none"}}>
+                                    
+                                    <Icon icon="tap" />
+                                    <span style={{
+                                        marginLeft: "8px", marginRight: "8px"}}>
                                         {showNumber} of {list.length}. Show more?
                                     </span>
-                                    <Icon icon="add" />
-                                </Button></CardContent>  : null  }
-                            </React.Fragment> : null }
+                                </Button>
+                            </CardContent>  : null  }
+                        </React.Fragment> : null }
                 </Paper> : null }
             </Box>
         </Box>

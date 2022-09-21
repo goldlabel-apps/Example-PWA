@@ -3,11 +3,13 @@
 // https://mui.com/components/material-icons/
 import * as React from "react"
 import DefaultIcon from "@mui/icons-material/DisabledByDefault"
+
 import HomeIcon from "@mui/icons-material/Home"
 import ShoppingIcon from "@mui/icons-material/ShoppingBag";
 import EmailIcon from "@mui/icons-material/Email";
 import InfiniteMenuIcon from "@mui/icons-material/LinearScale";
 import DiveShopIcon from "@mui/icons-material/BeachAccess";
+import TapIcon from "@mui/icons-material/TouchApp";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import SitesIcon from "@mui/icons-material/Language"
 import SpearoIcon from "@mui/icons-material/Pool"
@@ -111,6 +113,10 @@ export default function Icon(props: any) {
       iconFragment = <ShoppingIcon color={color} />
       break
 
+      case "tap":
+        iconFragment = <TapIcon color={color} />
+        break
+
       case "diveshop":
         iconFragment = <DiveShopIcon color={color} />
         break
@@ -118,9 +124,11 @@ export default function Icon(props: any) {
     case "persona":
       iconFragment = <PersonaIcon color={color} />
       break
+
     case "filter":
       iconFragment = <FilterIcon color={color} />
       break
+
     case "watch":
         iconFragment = <WatchIcon color={color} />
         break

@@ -4,7 +4,27 @@ import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
 import {mdBody_Garmin} from "./md/mdBody_Garmin";
 
 const list = [
-    { 
+  { 
+    value: {
+      uid: "P_0000000021",
+      title: "Maltese Islands Dive Guide",
+      slug: "malta-dive-guide",
+      category: "Dives",
+      tags: ["book"],
+      icon: "dive",
+      order: 10,
+      excerpt: "This app is based on the book _Maltese Islands Dives Guide_ published in 1997 by Ned Middleton",
+      image: "/jpg/Maltese-Islands-Diving-Guide/Maltese-Islands-Diving-Guide_800.jpg",
+      bodyFormat: "md",
+      body: mdBody_DiveGuide,
+      zoom: 9.6,
+      center: [14.38, 35.94],
+      links:[
+        {label: "Amazon", value: "https://" },
+      ],
+    },
+  },  
+  { 
       value: {
         uid: "GARMIN_000000001",
         title: "Garmin Descent™ Mk1",
@@ -13,7 +33,7 @@ const list = [
         tags: ["computer"],
         icon: "watch",
         excerpt: "Dive",
-        image: "/jpg/UmElFaroud/UmElFaroud.jpg",
+        image: "/jpg/Garmin/Garmin.jpg",
         bodyFormat: "md",
         body: mdBody_Garmin,
         links:[
@@ -21,6 +41,23 @@ const list = [
         ],
       },
     },
+
+    { 
+      value: {
+        uid: "DM_00000asdf21",
+        slug: "diveshops/abc-diving",
+        category: "advert",
+        tags: ["rental", "guided diving", "courses"],
+        icon: "diveshop",
+        title: "ABC Diving",
+        excerpt: "Small, bespoke PADI dive centre set in an idyllic waterfront location",
+        image: "/jpg/ABCDiving/ABCDiving.jpg",
+        bodyFormat: "md",
+        body: "ABC Dives is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
+      },
+    }, 
+
+    
     { 
     value: {
       uid: "ABC_000000001",
@@ -42,41 +79,8 @@ const list = [
       ],
     },
   },
-  { 
-    value: {
-      uid: "DM_00000asdf21",
-      slug: "diveshops/abc-diving",
-      category: "advert",
-      tags: ["rental", "guided diving", "courses"],
-      icon: "diveshop",
-      title: "ABC Diving",
-      excerpt: "Small, bespoke PADI dive centre set in an idyllic waterfront location",
-      image: "/jpg/ABCDiving/ABCDiving.jpg",
-      bodyFormat: "md",
-      body: "ABC Dives is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
-    },
-  }, 
-  { 
-    value: {
-      uid: "P_0000000021",
-      title: "Maltese Islands Dive Guide",
-      slug: "malta-dive-guide",
-      category: "Dives",
-      tags: ["book"],
-      icon: "dive",
-      order: 10,
-      excerpt: "This app is based on the book _Maltese Islands Dives Guide_ published in 1997 by Ned Middleton",
-      image: "/jpg/Maltese-Islands-Diving-Guide/Maltese-Islands-Diving-Guide_800.jpg",
-      bodyFormat: "md",
-      body: mdBody_DiveGuide,
-      zoom: 9.6,
-      center: [14.38, 35.94],
-      links:[
-        {label: "Amazon", value: "https://" },
-      ],
-    },
-  },
-
+  
+  
   {
     value: {
       uid: "D_0AB3000002",
