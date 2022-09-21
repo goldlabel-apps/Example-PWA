@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { featuresStore } from './features/featuresStore';
 import {
@@ -25,21 +24,15 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.Fragment>
-    <Router>
       <Provider store={ featuresStore }>
         <ThemeProvider theme={createTheme(theme())}>
           <CssBaseline />
           <Container maxWidth="lg">
             <Shared />
-              <Switch>
-                <Route 
-                  path="**" 
-                  render={({ history }) => <DiveMalta /> } />
-              </Switch>
+            <DiveMalta />
           </Container>
         </ThemeProvider>
       </Provider>
-      </Router>
   </React.Fragment>
 )
 

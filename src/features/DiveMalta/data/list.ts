@@ -5,6 +5,7 @@ import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
 const list = [
   { 
     value: {
+
       uid: "ABC_000000001",
       slug: "umelfaroud",
       category: "Dives",
@@ -27,13 +28,13 @@ const list = [
   { 
     value: {
       uid: "DM_00000asdf21",
-      slug: "abcDivesmalta",
+      slug: "diveshops/abc-diving",
       category: "advert",
-      tags: ["Diveshop"],
+      tags: ["rental", "guided diving", "courses"],
       icon: "diveshop",
-      title: "ABC Dives",
-      excerpt: "",
-      image: "/jpg/ABCDives/ABCDives.jpg",
+      title: "ABC Diving",
+      excerpt: "Small, bespoke PADI dive centre set in an idyllic waterfront location",
+      image: "/jpg/ABCDiving/ABCDiving.jpg",
       bodyFormat: "md",
       body: "ABC Dives is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
     },
@@ -44,11 +45,11 @@ const list = [
       title: "Maltese Islands Dive Guide",
       slug: "malta-dive-guide",
       category: "Dives",
-      tags: ["by Ned Middleton"],
+      tags: ["book"],
       icon: "dive",
       order: 10,
       excerpt: "This app is based on the book _Maltese Islands Dives Guide_ published in 1997 by Ned Middleton",
-      image: "/jpg/Maltese-Islands-Dives-Guide/Maltese-Islands-Dives-Guide.jpg",
+      image: "/jpg/Maltese-Islands-Diving-Guide/Maltese-Islands-Diving-Guide_800.jpg",
       bodyFormat: "md",
       body: mdBody_DiveGuide,
       zoom: 9.6,
@@ -63,12 +64,12 @@ const list = [
     value: {
       uid: "D_0AB3000002",
       category: "Dives",
-      tags:["Cave", "Wreck"],
+      tags:["cave", "wreck"],
       title: "Anchor Bay",
       excerpt: "AKA Scorpion Cave & Popeye Village",
       icon: "dive",
       slug: "anchor-bay",
-      image: "/jpg/Anchor-Bay/Anchor-Bay.jpg",
+      image: "/jpg/Anchor-Bay/Anchor-Bay_800.jpg",
       bodyFormat: "text",
       body: "Anchor Bay Cave, also known as Scorpion Cave, is the best dive site in Anchor Bay. The cave is located on the south side of the bay, approximately 150 m from the entry/exit point at the concrete jetty",
     },

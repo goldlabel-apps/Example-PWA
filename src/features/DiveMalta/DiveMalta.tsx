@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   useFeatureSelect,
 } from "../Shared/store/hooks";
-import {useLocation} from "react-router-dom";
+// import {useLocation} from "react-router-dom";
 import {
   // useMediaQuery,
   Paper,
@@ -13,13 +13,15 @@ import {
   InfiniteMenu,
   Bottombar,
   Topbar,
+  Category,
 } from "../DiveMalta";
 
 export default function DiveMalta() {
   const diveMalta = useFeatureSelect( selectDiveMalta );
   // const isMobile = !useMediaQuery("(min-width:900px)");
-  const location = useLocation();
-  const {pathname} = location;
+  // const location = useLocation();
+  const {pathname} = window.location;
+  console.log ("DiveMalta", pathname);
   const {list} = diveMalta;
   let track = null;
   let trackPath = pathname;
@@ -30,8 +32,6 @@ export default function DiveMalta() {
     }
   }
 
-  console.log ("DiveMalta", pathname);
-
   return (<React.Fragment>
             <Topbar />
             <Grid container sx={{mb:10}}>
@@ -39,40 +39,17 @@ export default function DiveMalta() {
                 <InfiniteMenu />
               </Grid>
               <Grid item xs={12} md={8}>
-                <Paper sx={{m:1, p:1}}>
+                
                   {track ? <React.Fragment>
-                    got track
+                    <Paper sx={{m:0.5, p:1}}>
+                      <pre>{JSON.stringify(track, null, 2)}</pre>
+                    </Paper>
                   </React.Fragment> : <React.Fragment>
-                    pathname {pathname}
-                  </React.Fragment> }
-                </Paper>
+                    <Category />
+                  </React.Fragment>}
+                
               </Grid>
             </Grid>
             <Bottombar />
           </React.Fragment>);
 };
-/*
-<Single track={track} setMode={"single"} />
-if(pathname === "/"){
-    return (
-      <React.Fragment>
-        <Topbar />
-        <Grid container sx={{mb:5}}>
-          <Grid item xs={12} md={4}>  
-            {!isMobile ? null : <InfiniteMenu /> }
-            <Featured />
-            {!isMobile ? <InfiniteMenu /> : null }
-          </Grid>
-          <Grid item xs={12} md={8}>
-            <Box sx={{pr:1}}>
-              <Category />
-            </Box>
-          </Grid>
-          </Grid>
-        <Bottombar />
-      </React.Fragment>
-    )
-  }
-
-  <pre>{JSON.stringify(item, null, 2)}</pre>
-*/
