@@ -1,5 +1,7 @@
-import Shared from "./Shared"
-import SearchInput from "./components/SearchInput"
+import Shared from "./Shared";
+import { filterBanners } from "./utils/filterBanners";
+import { bubbleSort } from "./utils/bubbleSort";
+import SearchInput from "./components/SearchInput";
 import EditableFieldString from "./components/EditableFieldString"
 import EditableFieldSelect from "./components/EditableFieldSelect"
 import SelectAWSRegion from "./components/SelectAWSRegion"
@@ -23,8 +25,10 @@ import { navigateTo } from "./store/actions/navigateTo"
 import { confirm } from "./store/actions/confirm"
 import { onConfirm } from "./store/actions/confirm"
 import { addItem } from "./store/actions/addItem"
-import { filterBanners } from "./utils/filterBanners"
-import { bubbleSort } from "./utils/bubbleSort"
+import { scrollTo } from "./store/actions/scrollTo";
+import { routeTo } from "./store/actions/routeTo";
+
+
 import {
   selectShared,
   setSharedKey,
@@ -62,4 +66,6 @@ export {
   SelectBackground,
   bubbleSort,
   navigateTo,
+  scrollTo,
+  routeTo,
 }

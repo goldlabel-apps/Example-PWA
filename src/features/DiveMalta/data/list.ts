@@ -7,11 +7,11 @@ const list = [
     value: {
       uid: "ABC_000000001",
       slug: "umelfaroud",
-      category: "Diving",
+      category: "Dives",
       tags: ["shore", "wreck"],
       icon: "dive",
       title: "Um El Faroud",
-      excerpt: "MV Um El Faroud was a Libyan oil tanker that was scuttled off the coast of Wied iz-Zurrieq in 1998 as an artificial reef and a scuba diving attraction, after suffering damage in an explosion at the dry docks.",
+      excerpt: "MV Um El Faroud was a Libyan oil tanker that was scuttled off the coast of Wied iz-Zurrieq in 1998 as an artificial reef and a scuba Dives attraction, after suffering damage in an explosion at the dry docks.",
       image: "/jpg/UmElFaroud/UmElFaroud.jpg",
       bodyFormat: "md",
       body: mdBody_UmElFaroud,
@@ -27,15 +27,15 @@ const list = [
   { 
     value: {
       uid: "DM_00000asdf21",
-      slug: "abcdivingmalta",
+      slug: "abcDivesmalta",
       category: "advert",
       tags: ["Diveshop"],
       icon: "diveshop",
-      title: "ABC Diving",
+      title: "ABC Dives",
       excerpt: "",
-      image: "/jpg/ABCDiving/ABCDiving.jpg",
+      image: "/jpg/ABCDives/ABCDives.jpg",
       bodyFormat: "md",
-      body: "ABC Diving is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
+      body: "ABC Dives is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
     },
   }, 
   { 
@@ -43,12 +43,12 @@ const list = [
       uid: "P_0000000021",
       title: "Maltese Islands Dive Guide",
       slug: "malta-dive-guide",
-      category: "Diving",
+      category: "Dives",
       tags: ["by Ned Middleton"],
       icon: "dive",
       order: 10,
-      excerpt: "This app is based on the book _Maltese Islands Diving Guide_ published in 1997 by Ned Middleton",
-      image: "/jpg/Maltese-Islands-Diving-Guide/Maltese-Islands-Diving-Guide.jpg",
+      excerpt: "This app is based on the book _Maltese Islands Dives Guide_ published in 1997 by Ned Middleton",
+      image: "/jpg/Maltese-Islands-Dives-Guide/Maltese-Islands-Dives-Guide.jpg",
       bodyFormat: "md",
       body: mdBody_DiveGuide,
       zoom: 9.6,
@@ -62,7 +62,7 @@ const list = [
   {
     value: {
       uid: "D_0AB3000002",
-      category: "Diving",
+      category: "Dives",
       tags:["Cave", "Wreck"],
       title: "Anchor Bay",
       excerpt: "AKA Scorpion Cave & Popeye Village",
@@ -78,7 +78,7 @@ const list = [
     value: {
       uid: "D_66RZ000002",
       slug: "rozi",
-      category: "Diving",
+      category: "Dives",
       tags:["Wreck"],
       icon: "dive",
       title: "Rozi",
@@ -133,9 +133,9 @@ const list = [
         uid: "D_001XL01001",
         
         slug: "xlendi",
-        icon: "diving",
+        icon: "dive",
         title: "Xlendi",
-        category: "diving",
+        category: "Dives",
         tags:["Cave", "Shore"],
         image: "/jpg/XlendiCaves/XlendiCaves.jpg",
         excerpt: "If you enter the water on the left hand side of the valley by the fifth ladder and following a compass heading of 300 degrees you will find the entrance to Xlendi Cave and the tunnel entrance is located just 2 metres deep on the cliff side",
@@ -143,8 +143,8 @@ const list = [
         body: "<p>Ix Xledni Bay is a typical Gozitan fishing village located in a valley on the south west coast of Gozo. There are a number of bars restaurants and hotels serving the village. And the bay has a small beach, Xlendi bay is very popular with swimmers, snorkelers and divers.</p><p>If you enter the water on the left hand side of the valley by the fifth ladder and following a compass heading of 300 degrees you will find the entrance to Xlendi Cave and the tunnel entrance is located just 2 metres deep on the cliff side</p>",
         links: [
           {
-            label: "paradisediving",
-            value: "https://paradisediving.com/xlendi-cave/",
+            label: "paradiseDives",
+            value: "https://paradiseDives.com/xlendi-cave/",
           }
         ],
         

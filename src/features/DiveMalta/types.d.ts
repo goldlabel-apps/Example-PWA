@@ -14,6 +14,15 @@ export type WierdShape = {
   value?: any;
 }
 
+export type DMRoute = {
+  path: string;
+  
+}
+
+export type DMMenuItem = {
+  value: any;
+}
+
 export interface DiveMaltaTrack {
 name: string;
 length: number;

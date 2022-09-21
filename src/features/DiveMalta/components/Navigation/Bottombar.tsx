@@ -2,7 +2,6 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import {
   AppBar,
-  Box,
   Toolbar,
 } from '@mui/material/';
 import Fab from '@mui/material/Fab';

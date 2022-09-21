@@ -4,23 +4,20 @@ import {
 } from "../Shared/store/hooks";
 import {useLocation} from "react-router-dom";
 import {
-  useMediaQuery,
-  Box,
+  // useMediaQuery,
+  Paper,
   Grid,
 } from "@mui/material";
 import {
   selectDiveMalta,
   InfiniteMenu,
   Bottombar,
-  Category,
   Topbar,
-  Single,
-  Featured,
 } from "../DiveMalta";
 
 export default function DiveMalta() {
   const diveMalta = useFeatureSelect( selectDiveMalta );
-  const isMobile = !useMediaQuery("(min-width:900px)");
+  // const isMobile = !useMediaQuery("(min-width:900px)");
   const location = useLocation();
   const {pathname} = location;
   const {list} = diveMalta;
@@ -33,24 +30,29 @@ export default function DiveMalta() {
     }
   }
 
+  console.log ("DiveMalta", pathname);
+
   return (<React.Fragment>
             <Topbar />
             <Grid container sx={{mb:10}}>
               <Grid item xs={12} md={4}>
                 <InfiniteMenu />
-                <Featured />
               </Grid>
               <Grid item xs={12} md={8}>
-                MAIN {track ? null : null }
+                <Paper sx={{m:1, p:1}}>
+                  {track ? <React.Fragment>
+                    got track
+                  </React.Fragment> : <React.Fragment>
+                    pathname {pathname}
+                  </React.Fragment> }
+                </Paper>
               </Grid>
             </Grid>
             <Bottombar />
           </React.Fragment>);
 };
 /*
-
 <Single track={track} setMode={"single"} />
-
 if(pathname === "/"){
     return (
       <React.Fragment>

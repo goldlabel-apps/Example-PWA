@@ -1,5 +1,8 @@
 import * as React from 'react';
 import {
+  useFeatureDispatch,
+} from "../../../Shared/store/hooks";
+import {
   Card,
   CardHeader,
   Link,
@@ -8,26 +11,32 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import {Icon} from "../../../Shared";
+import {
+  Icon,
+  routeTo,
+} from "../../../Shared";
 
 export default function Featured() {
-
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
-
+  const dispatch = useFeatureDispatch();
+  const expanded = false;
+  const path = "/diveshops/abc-diving";
   return (
     <Card sx={{ m:0.5 }}>
       <CardHeader 
         title={<React.Fragment>
-                <Typography variant="body2">
-                  {`Featured`}
+                <Typography variant="body1">
+                  
+                    <Link
+                      sx={{cursor: "pointer"}}
+                      onClick={(e:React.MouseEvent) => {
+                        e.preventDefault();
+                        dispatch(routeTo(path));
+                      }}
+                    >
+                      {`ABC Diving, Malta`}
+                    </Link>
               </Typography>
             </React.Fragment>}
-        subheader="ABC Diving, Malta"
         action={<React.Fragment>
           <IconButton
             color="secondary"
@@ -61,7 +70,6 @@ export default function Featured() {
           location <Link>more...</Link>
         </CardContent>
       </Collapse>
-      
     </Card>
   );
 }
