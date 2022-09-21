@@ -15,7 +15,6 @@ import {
     selectDiveMalta,
     increaseShowNumber,
     setDiveMaltaKey,
-    Featured,
 } from "../../";
 import {
     useMediaQuery,
@@ -26,7 +25,6 @@ import {
     MenuItem,
     ListItemText,
     ListItemIcon,
-    CardContent,
 } from "@mui/material";
 
 export default function InfiniteMenu(props:InfiniteMenuShape) {
@@ -51,9 +49,6 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
 
     return (
         <Box sx={{m:0.5}}>
-            
-            <Featured />
-
             <Box sx={{m:0.5}}>
             {isMobile ? <Button
                 fullWidth
@@ -80,19 +75,17 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                 title,
                                 icon,
                                 slug,
-                                category,
+                                // category,
                             } = item.value;
                             if (i >= showNumber) return null
                             return (<MenuItem 
                                         key={`track_${i}`}
                                         onClick={(e:React.MouseEvent) => {
                                             e.preventDefault();
-                                            const path = `/${category.toLowerCase()}/${slug}`;
-                                            dispatch(routeTo(path));
-                                            // console.log ("DMRoutes", path);
+                                            dispatch(routeTo(`/${slug}`));
                                         }}>
                                         <ListItemIcon>
-                                            <Icon icon={icon} color="secondary" />
+                                            <Icon icon={icon} color="primary" />
                                         </ListItemIcon>
                                         <ListItemText
                                             primary={title}
@@ -101,9 +94,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                         })}
                     </List>
                     {open ? <React.Fragment>
-                                { list.length > showNumber ? <CardContent>
-                                
-                                <Button
+                                { list.length > showNumber ? <Button
                                     id="infinite-button"
                                     fullWidth
                                     variant="text"
@@ -118,8 +109,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                         marginLeft: "8px", marginRight: "8px"}}>
                                         {showNumber} of {list.length}. Show more?
                                     </span>
-                                </Button>
-                            </CardContent>  : null  }
+                                </Button>  : null  }
                         </React.Fragment> : null }
                 </Paper> : null }
             </Box>

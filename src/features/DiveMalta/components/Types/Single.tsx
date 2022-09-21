@@ -88,7 +88,7 @@ export default function Single(props:any) {
                       aria-expanded={expanded}
                       aria-label="show more"
                     >
-                      <Icon icon="acc" color="secondary" />
+                      <Icon icon="acc" color="primary" />
                     </ExpandMore>
                     </React.Fragment> : null}
           title={ title }

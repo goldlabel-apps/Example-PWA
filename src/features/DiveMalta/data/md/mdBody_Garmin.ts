@@ -1,7 +1,5 @@
 export const mdBody_Garmin = `#### Garmin Descent™ Mk1
 
-![Garmin Descent™ Mk1](https://res.garmin.com/en/products/010-01760-00/v/cf-lg.jpg)
-
 > Versatile GPS Dive Computer for Your Diving Adventures
 
 - Premium full-featured dive computer with surface GPS in a sleek watch-style design; with bright 1.2” color display and TOPO mapping

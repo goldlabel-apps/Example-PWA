@@ -4,7 +4,6 @@ import {
 } from "../Shared/store/hooks";
 import {
   // useMediaQuery,
-  Paper,
   Grid,
 } from "@mui/material";
 import {
@@ -14,14 +13,15 @@ import {
   Topbar,
   Category,
   Single,
+  Featured,
 } from "../DiveMalta";
 
 export default function DiveMalta() {
-  const diveMalta = useFeatureSelect( selectDiveMalta );
+  const diveMalta = useFeatureSelect(selectDiveMalta);
+  const {pathname} = window.location;
   // const isMobile = !useMediaQuery("(min-width:900px)");
   // const location = useLocation();
-  const {pathname} = window.location;
-  console.log ("DiveMalta", pathname);
+  // console.log ("DiveMalta", pathname);
   const {list} = diveMalta;
   let track = null;
   let trackPath = pathname;
@@ -39,16 +39,15 @@ export default function DiveMalta() {
                 <InfiniteMenu />
               </Grid>
               <Grid item xs={12} md={8}>
-                
                   {track ? <React.Fragment>
-
-                    <Single track={track} />
-
-
-                  </React.Fragment> : <React.Fragment>
-                    <Category />
-                  </React.Fragment>}
-                
+                              <Single track={track} />
+                              <Featured />
+                            </React.Fragment> 
+                    :
+                    <React.Fragment>
+                      <Category />
+                      <Featured />
+                    </React.Fragment>}
               </Grid>
             </Grid>
             <Bottombar />

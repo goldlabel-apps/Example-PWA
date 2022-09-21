@@ -1,5 +1,5 @@
 {
-  "version": "2.4.2",
+  "version": "2.4.3",
   "name": "divemalta",
   "description": "View, Edit & Share Geodata using React & Material UI",
   "keywords": ["garmin", "react", "pwa-seo"],

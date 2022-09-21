@@ -6,8 +6,6 @@ import {
   Card,
   CardHeader,
   Link,
-  Collapse,
-  CardContent,
   IconButton,
   Typography,
 } from "@mui/material";
@@ -18,9 +16,52 @@ import {
 
 export default function Featured() {
   const dispatch = useFeatureDispatch();
-  const expanded = false;
-  const path = "/diveshops/abc-diving";
-  return (
+  const pathABC = "/diveshops/abc-diving";
+  const pathOctopus = "/diveshops/octopus";
+  return (<React.Fragment>
+    <Card sx={{ m:0.5 }}>
+      <CardHeader 
+        title={<React.Fragment>
+                <Typography variant="body1">
+                    <Link
+                      sx={{cursor: "pointer"}}
+                      onClick={(e:React.MouseEvent) => {
+                        e.preventDefault();
+                        dispatch(routeTo(pathOctopus));
+                      }}
+                    >
+                      {`Octopus Garden`}
+                    </Link>
+              </Typography>
+            </React.Fragment>}
+        subheader={<React.Fragment>
+                      <Typography variant="body2">
+                        German Diving center and training acadamy
+                      </Typography>
+                    </React.Fragment>}
+        action={<React.Fragment>
+          
+          <IconButton 
+            color="primary"
+            onClick={(e: React.MouseEvent) => {
+              e.preventDefault();
+              window.open("mailto:info@pathOctopus", "_blank");
+            }}>
+              <Icon icon="email"/>
+          </IconButton>
+          <IconButton 
+            color="primary"
+            onClick={(e: React.MouseEvent) => {
+              e.preventDefault();
+              window.open("https://octopus-garden.net", "_blank");
+            }}>
+              <Icon icon="site"/>
+          </IconButton>
+        </React.Fragment>}
+      />
+        
+    </Card>
+
     <Card sx={{ m:0.5 }}>
       <CardHeader 
         title={<React.Fragment>
@@ -30,11 +71,16 @@ export default function Featured() {
                       sx={{cursor: "pointer"}}
                       onClick={(e:React.MouseEvent) => {
                         e.preventDefault();
-                        dispatch(routeTo(path));
+                        dispatch(routeTo(pathABC));
                       }}
                     >
                       {`ABC Diving, Malta`}
                     </Link>
+              </Typography>
+            </React.Fragment>}
+        subheader={<React.Fragment>
+              <Typography variant="body2">
+              Bespoke PADI dive centre set in an idyllic waterfront location
               </Typography>
             </React.Fragment>}
         action={<React.Fragment>
@@ -64,12 +110,7 @@ export default function Featured() {
           </IconButton>
         </React.Fragment>}
       />
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          Bespoke PADI dive centre set in an idyllic waterfront 
-          location <Link>more...</Link>
-        </CardContent>
-      </Collapse>
     </Card>
+    </React.Fragment>
   );
 }

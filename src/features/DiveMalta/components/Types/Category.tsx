@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {
   useFeatureSelect,
+  useFeatureDispatch,
 } from "../../../Shared/store/hooks";
 import { selectDiveMalta } from '../../';
 import {
@@ -12,9 +13,11 @@ import {
 } from "@mui/material"
 import {
   Icon,
+  routeTo,
 } from "../../../Shared";
 
 export default function Category() {
+  const dispatch = useFeatureDispatch();
   const diveMalta = useFeatureSelect( selectDiveMalta );
   const {list} = diveMalta;
   // console.log ("list", list);
@@ -37,6 +40,7 @@ let secondaryText = <React.Fragment>
           title,
           tags,
           image,
+          slug,
         } = item.value;
         return (
           <Grid item xs={12} sm={6} key={`item_${i}`}>
@@ -50,8 +54,9 @@ let secondaryText = <React.Fragment>
               action={ <React.Fragment>
                           <IconButton
                             color="primary"
-                            onClick={()=>{}}
-                          >
+                            onClick={()=>{
+                              dispatch(routeTo(slug));
+                            }}>
                             <Icon icon="right" />
                           </IconButton>
                         </React.Fragment>}
@@ -64,7 +69,7 @@ let secondaryText = <React.Fragment>
                 alt="ABC Diving, Malta"
                 onClick={(e: React.MouseEvent) => {
                   e.preventDefault();
-                  
+                  dispatch(routeTo(slug));
                 }}/>
             </Card>
           </Grid>

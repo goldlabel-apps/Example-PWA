@@ -23,7 +23,7 @@ const initialState: DiveMaltaSlice = {
   newItemValue: "",
   list,
   showInfiniteMenu: false,
-  showNumber: 5,
+  showNumber: 10,
 }
 
 export const divemaltaSlice = createSlice({
