@@ -4,6 +4,8 @@ This is a React Progressive Web App. It uses data created with a [Garmin Descent
 
 #### Garmin Descent™ Mk1
 
+![Garmin Descent™ Mk1](https://res.garmin.com/en/products/010-01760-00/v/cf-lg.jpg)
+
 >Versatile GPS Dive Computer for Your Diving Adventures
 
 - Premium full-featured dive computer with surface GPS in a sleek watch-style design; with bright 1.2” color display and TOPO mapping
@@ -13,6 +15,7 @@ This is a React Progressive Web App. It uses data created with a [Garmin Descent
 - Features Elevate™ wrist heart rate technology² with multisport activity profiles, performance metrics and smart notifications³
 - Battery life: up to 19 days in watch mode, 10 days in smartwatch mode, 40 hours in dive mode and 20 hours in GPS mode
 
+#### The App
 
 > View, Edit & Share Geodata using React & Material UI
 
