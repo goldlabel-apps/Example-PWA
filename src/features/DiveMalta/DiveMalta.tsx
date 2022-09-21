@@ -33,7 +33,26 @@ export default function DiveMalta() {
     }
   }
 
-  if(pathname === "/"){
+  return (<React.Fragment>
+            <Topbar />
+            <Grid container sx={{mb:10}}>
+              <Grid item xs={12} md={4}>
+              {isMobile ? null : <InfiniteMenu /> }
+              <Featured />
+              {!isMobile ? <InfiniteMenu /> : null }
+              </Grid>
+              <Grid item xs={12} md={8}>
+                MAIN
+              </Grid>
+            </Grid>
+            <Bottombar />
+          </React.Fragment>);
+};
+/*
+
+<Generic track={track} setMode={"single"} />
+
+if(pathname === "/"){
     return (
       <React.Fragment>
         <Topbar />
@@ -53,21 +72,6 @@ export default function DiveMalta() {
       </React.Fragment>
     )
   }
-  return (<React.Fragment>
-            <Topbar />
-            <Grid container sx={{mb:10}}>
-              <Grid item xs={12} md={4}>
-              {isMobile ? null : <InfiniteMenu /> }
-              <Featured />
-              {!isMobile ? <InfiniteMenu /> : null }
-              </Grid>
-              <Grid item xs={12} md={8}>
-                <Generic track={track} setMode={"single"} />
-              </Grid>
-            </Grid>
-            <Bottombar />
-          </React.Fragment>);
-};
-/*
+
   <pre>{JSON.stringify(item, null, 2)}</pre>
 */
