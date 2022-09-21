@@ -1,7 +1,5 @@
 ## divemalta.app
 
-This is a React Progressive Web App. It uses data created with a [Garmin Descent™ Mk1](https://www.garmin.com/en-US/p/568181). You can create compatable data (.gpx) with pretty much any smart device for free. Upload and make it more fun here.
-
 #### Garmin Descent™ Mk1
 
 ![Garmin Descent™ Mk1](https://res.garmin.com/en/products/010-01760-00/v/cf-lg.jpg)
@@ -15,7 +13,10 @@ This is a React Progressive Web App. It uses data created with a [Garmin Descent
 - Features Elevate™ wrist heart rate technology² with multisport activity profiles, performance metrics and smart notifications³
 - Battery life: up to 19 days in watch mode, 10 days in smartwatch mode, 40 hours in dive mode and 20 hours in GPS mode
 
+
 #### The App
+
+This is a React Progressive Web App. It uses data created with a [Garmin Descent™ Mk1](https://www.garmin.com/en-US/p/568181). You can create compatable data (.gpx) with pretty much any smart device for free. Upload and make it more fun here
 
 > View, Edit & Share Geodata using React & Material UI
 
