@@ -31,7 +31,8 @@ import MapIcon from "@mui/icons-material/LocationDisabled"
 import MenuIcon from "@mui/icons-material/Menu"
 import TrashIcon from "@mui/icons-material/DeleteOutlined"
 import VisibilityIcon from "@mui/icons-material/Visibility"
-import ExitIcon from "@mui/icons-material/ExitToAppRounded"
+import ExitIcon from "@mui/icons-material/ExitToAppRounded";
+import WatchIcon from "@mui/icons-material/Watch";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import FilebrowserIcon from "@mui/icons-material/Attachment"
 import ImagefileIcon from "@mui/icons-material/Image"
@@ -120,10 +121,14 @@ export default function Icon(props: any) {
     case "filter":
       iconFragment = <FilterIcon color={color} />
       break
+    case "watch":
+        iconFragment = <WatchIcon color={color} />
+        break
+
     case "acc":
       iconFragment = <AccExpandIcon color={color} />
       break
-    
+      
     case "archive":
       iconFragment = <ArchiveIcon color={color} />
       break

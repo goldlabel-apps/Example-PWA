@@ -1,11 +1,28 @@
 import {mdBody_Rozi} from "./md/mdBody_Rozi";
 import {mdBody_DiveGuide} from "./md/mdBody_DiveGuide";
 import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
+import {mdBody_Garmin} from "./md/mdBody_Garmin";
 
 const list = [
-  { 
+    { 
+      value: {
+        uid: "GARMIN_000000001",
+        title: "Garmin Descent™ Mk1",
+        slug: "garmin-descent-mk1",
+        category: "Gear",
+        tags: ["computer"],
+        icon: "watch",
+        excerpt: "Dive",
+        image: "/jpg/UmElFaroud/UmElFaroud.jpg",
+        bodyFormat: "md",
+        body: mdBody_Garmin,
+        links:[
+          {label: "Product Image", value: "https://res.garmin.com/en/products/010-01760-00/v/cf-lg.jpg" },
+        ],
+      },
+    },
+    { 
     value: {
-
       uid: "ABC_000000001",
       slug: "umelfaroud",
       category: "Dives",

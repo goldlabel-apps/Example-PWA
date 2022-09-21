@@ -6,7 +6,7 @@ This is a React Progressive Web App. It uses data created with a [Garmin Descent
 
 ![Garmin Descent™ Mk1](https://res.garmin.com/en/products/010-01760-00/v/cf-lg.jpg)
 
->Versatile GPS Dive Computer for Your Diving Adventures
+> Versatile GPS Dive Computer for Your Diving Adventures
 
 - Premium full-featured dive computer with surface GPS in a sleek watch-style design; with bright 1.2” color display and TOPO mapping
 - Built-in sensors include 3-axis compass, gyroscope and barometric altimeter as well as GPS and GLONASS capability that lets you mark your dive entry and exit points¹ for surface navigation
