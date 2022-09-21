@@ -36,7 +36,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function Generic(props:any) {
+export default function Single(props:any) {
   let mode = "list";
   const dispatch = useFeatureDispatch();
   const [expanded, setExpanded] = React.useState(false);

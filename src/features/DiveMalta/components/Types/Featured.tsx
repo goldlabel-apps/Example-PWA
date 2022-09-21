@@ -3,7 +3,7 @@ import {
   Card,
   CardHeader,
   Link,
-  // CardActions,
+  Collapse,
   CardContent,
   IconButton,
   Typography,
@@ -11,6 +11,14 @@ import {
 import {Icon} from "../../../Shared";
 
 export default function Featured() {
+
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+
   return (
     <Card sx={{ m:0.5 }}>
       <CardHeader 
@@ -22,7 +30,7 @@ export default function Featured() {
         subheader="ABC Diving, Malta"
         action={<React.Fragment>
           <IconButton
-            color="primary"
+            color="secondary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
               window.open("https://api.whatsapp.com/send?phone=35677333112&text=%F0%9F%9A%80", "_blank");
@@ -30,7 +38,7 @@ export default function Featured() {
               <Icon icon="whatsapp"/>
           </IconButton>
           <IconButton 
-            color="primary"
+            color="secondary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
               window.open("mailto:info@abcdivingmalta.com", "_blank");
@@ -38,7 +46,7 @@ export default function Featured() {
               <Icon icon="email"/>
           </IconButton>
           <IconButton 
-            color="primary"
+            color="secondary"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
               window.open("https://www.abcdivingmalta.com", "_blank");
@@ -47,10 +55,12 @@ export default function Featured() {
           </IconButton>
         </React.Fragment>}
       />
-      <CardContent>
-        Bespoke PADI dive centre set in an idyllic waterfront 
-        location <Link>more...</Link>
-      </CardContent>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          Bespoke PADI dive centre set in an idyllic waterfront 
+          location <Link>more...</Link>
+        </CardContent>
+      </Collapse>
       
     </Card>
   );

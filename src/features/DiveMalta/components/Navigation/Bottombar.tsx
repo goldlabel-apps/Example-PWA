@@ -17,6 +17,7 @@ const StyledFab = styled(Fab)({
 });
 
 export default function Bottombar() {
+  const canScrollUp = false;
   return (
       <AppBar 
         position="fixed"
@@ -27,17 +28,17 @@ export default function Bottombar() {
           boxShadow: "none",  
         }}>
         <Toolbar>
-            <StyledFab color="primary"
+          {canScrollUp ? <StyledFab color="primary"
               onClick={(e: React.MouseEvent) => {
                 e.preventDefault();
                 // console.log ("New GPX");
               }}>
               <Icon icon="up" />
-            </StyledFab>
-          <Box sx={{ flexGrow: 1 }} />
+            </StyledFab> : null }
         </Toolbar>
       </AppBar>);
 }
 
 /*
+<Box sx={{ flexGrow: 1 }} />
 */

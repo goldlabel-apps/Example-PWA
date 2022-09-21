@@ -11,9 +11,9 @@ import InfiniteMenu from "./components/Navigation/InfiniteMenu";
 import Bottombar from "./components/Navigation/Bottombar";
 import MenuItems from "./components/Navigation/MenuItems";
 import Topbar from "./components/Navigation/Topbar";
-import MenuListItem from "./components/Types/MenuListItem";
+import MenuListItem from "./components/Navigation/MenuListItem";
 import Category from "./components/Types/Category";
-import Generic from "./components/Types/Generic";
+import Single from "./components/Types/Single";
 import Featured from "./components/Types/Featured";
 
 export {
@@ -21,7 +21,7 @@ export {
   Category,
   MenuListItem,
   InfiniteMenu,
-  Generic,
+  Single,
   Featured,
   Bottombar,
   Topbar,

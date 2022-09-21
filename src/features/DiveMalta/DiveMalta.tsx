@@ -14,7 +14,7 @@ import {
   Bottombar,
   Category,
   Topbar,
-  Generic,
+  Single,
   Featured,
 } from "../DiveMalta";
 
@@ -37,12 +37,11 @@ export default function DiveMalta() {
             <Topbar />
             <Grid container sx={{mb:10}}>
               <Grid item xs={12} md={4}>
-              {isMobile ? null : <InfiniteMenu /> }
-              <Featured />
-              {!isMobile ? <InfiniteMenu /> : null }
+                <InfiniteMenu />
+                <Featured />
               </Grid>
               <Grid item xs={12} md={8}>
-                MAIN
+                MAIN {track ? null : null }
               </Grid>
             </Grid>
             <Bottombar />
@@ -50,7 +49,7 @@ export default function DiveMalta() {
 };
 /*
 
-<Generic track={track} setMode={"single"} />
+<Single track={track} setMode={"single"} />
 
 if(pathname === "/"){
     return (

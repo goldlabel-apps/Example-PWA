@@ -15,6 +15,7 @@ import {
 import {
     useMediaQuery,
     Button,
+    IconButton,
     Box,
     Grid,
     List,
@@ -57,7 +58,8 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
         <Box sx={{m:0.5}}>
             {isMobile ? <Button
                 fullWidth
-                color="primary"
+                sx={{mb:1}}
+                color="secondary"
                 variant="contained"
                 id="infinite-button"
                 aria-controls={open ? 'infinite-menu' : undefined}
@@ -67,43 +69,41 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                     e.preventDefault();
                     menuButtonClick();
                 }}>
-                <Icon icon="imenu" />
                 <span style={{marginLeft:8,marginRight:8}}>
-                    { open ? `Hide nav` : `Show nav` }
+                    { open ? `Hide` : `Show` }
                 </span>
                 { open ? <Icon icon="up" /> : <Icon icon="down" /> }
             </Button> : null }
 
             { open ? <Paper>
-                
                 <List id="infinite-menu">
                     { list.map((item:WierdShape, i: number) => {
                         const {
                             title,
                             icon,
                             slug,
-                            tags,
-                            category,
+                            // tags,
+                            // category,
                         } = item.value;
                         if (i >= showNumber) return null
-                        let secondaryText = <React.Fragment>
-                                                {category ? category.toString() : null}
-                                                {tags ? tags.toString() : null}
-                                            </React.Fragment>;
-                        if(tags && !category){
-                            secondaryText = tags.toString();
-                        };
+                        // let secondaryText = <React.Fragment>
+                        //                         {category ? category.toString() : null}
+                        //                         {tags ? tags.toString() : null}
+                        //                     </React.Fragment>;
+                        // if(tags && !category){
+                        //     secondaryText = tags.toString();
+                        // };
                         return (<MenuItem 
                                     key={`track_${i}`}
                                     onClick={() => {
                                         handleMenuClick(slug);
                                     }}>
                                     <ListItemIcon>
-                                        <Icon icon={icon} color="primary" />
+                                        <Icon icon={icon} color="secondary" />
                                     </ListItemIcon>
                                     <ListItemText
                                         primary={title}
-                                        secondary={secondaryText}
+                                        // secondary={secondaryText}
                                     />
                                 </MenuItem>);
                     })}
@@ -113,21 +113,11 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
             { open ? <React.Fragment>
 
                 
-                <Grid container>
-                    <Grid item xs={6}>
-                        <Typography
-                            variant="body2"
-                            sx={{
-                                color: "white",
-                                p:1,
-                            }}>
-                            Showing {showNumber} of {list.length}
-                        </Typography>
-                    </Grid>
-                    { list.length > showNumber ? <Grid item xs={6}>
+                <Grid container sx={{mb:1}}>
+                    
+                    { list.length > showNumber ? <Grid item>
                         <Button
-                            fullWidth
-                            color="primary"
+                            sx={{mt:1}}
                             variant="contained"
                             id="infinite-button"
                             aria-controls={open ? 'infinite-menu' : undefined}
@@ -137,12 +127,16 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                 e.preventDefault();
                                 loadMore();
                             }}>
-                            <span style={{marginLeft:8,marginRight:8}}>
-                                Show more
-                            </span>
                             <Icon icon="add" />
                         </Button>
                     </Grid> : null  }
+                    <Grid item>
+                        <Typography
+                            variant="body2"
+                            sx={{ color: "white", p:1, mt:1}}>
+                            Showing {showNumber} of {list.length}
+                        </Typography>
+                    </Grid>
                     
                 </Grid>
                     
