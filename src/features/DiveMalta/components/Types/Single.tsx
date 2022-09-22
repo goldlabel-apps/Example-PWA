@@ -3,15 +3,12 @@ import {
   // useFeatureSelect,
   useFeatureDispatch,
 } from "../../../Shared/store/hooks";
-import { styled } from '@mui/material/styles';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import ReactMarkdown from 'react-markdown';
-
 import {
   Box,
   Card,
   CardHeader,
-  CardActions,
+  IconButton,
   CardMedia,
   CardContent,
   Typography
@@ -21,29 +18,11 @@ import {
   navigateTo,
 } from "../../../Shared";
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
 export default function Single(props:any) {
-  let mode = "list";
+  let mode = "single";
   const dispatch = useFeatureDispatch();
-  const [expanded, setExpanded] = React.useState(false);
-  const handleExpandClick = () => setExpanded(!expanded);
   const {track, setMode} = props;
   if (!track) return null;
-
   const {
     title,
     subheader,
@@ -62,7 +41,6 @@ export default function Single(props:any) {
       <Card sx={{ width: "100%" }}>
         <CardHeader
           avatar={<React.Fragment>
-
             { mode === "single" ? <IconButton
                     onClick={() => {
                       window.open("/", "_self");
@@ -81,16 +59,16 @@ export default function Single(props:any) {
                   </IconButton>
                 </React.Fragment>}
 
-          action={ mode !== "single" ? <React.Fragment>
-                    <ExpandMore
-                      expand={expanded}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                    >
-                      <Icon icon="acc" color="primary" />
-                    </ExpandMore>
-                    </React.Fragment> : null}
+          // action={ mode !== "single" ? <React.Fragment>
+          //           <ExpandMore
+          //             expand={expanded}
+          //             onClick={handleExpandClick}
+          //             aria-expanded={expanded}
+          //             aria-label="show more"
+          //           >
+          //             <Icon icon="acc" color="primary" />
+          //           </ExpandMore>
+          //           </React.Fragment> : null}
           title={ title }
           subheader={subheader}
         />
@@ -114,9 +92,6 @@ export default function Single(props:any) {
             {bodyFormat === "md" ? <ReactMarkdown children={body} /> : null }
 
           </CardContent>
-          <CardActions>
-            
-          </CardActions>
       </Card>
     </Box>
   );

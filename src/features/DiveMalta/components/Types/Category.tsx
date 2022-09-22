@@ -9,7 +9,6 @@ import {
   Card,
   CardHeader,
   CardMedia,
-  IconButton,
 } from "@mui/material"
 import {
   Icon,
@@ -51,15 +50,15 @@ let secondaryText = <React.Fragment>
                       </React.Fragment>}
               title={title}
               subheader={tags ? tags.toString() : null }
-              action={ <React.Fragment>
-                          <IconButton
-                            color="primary"
-                            onClick={()=>{
-                              dispatch(routeTo(slug));
-                            }}>
-                            <Icon icon="right" />
-                          </IconButton>
-                        </React.Fragment>}
+              // action={ <React.Fragment>
+              //             <IconButton
+              //               color="primary"
+              //               onClick={()=>{
+              //                 dispatch(routeTo(slug));
+              //               }}>
+              //               <Icon icon="right" />
+              //             </IconButton>
+              //           </React.Fragment>}
             />
             <CardMedia
                 sx={{p:1, cursor: "pointer"}}
@@ -69,7 +68,7 @@ let secondaryText = <React.Fragment>
                 alt="ABC Diving, Malta"
                 onClick={(e: React.MouseEvent) => {
                   e.preventDefault();
-                  dispatch(routeTo(slug));
+                  dispatch(routeTo(`/${slug}`));
                 }}/>
             </Card>
           </Grid>

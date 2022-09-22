@@ -19,9 +19,6 @@ import {
 export default function DiveMalta() {
   const diveMalta = useFeatureSelect(selectDiveMalta);
   const {pathname} = window.location;
-  // const isMobile = !useMediaQuery("(min-width:900px)");
-  // const location = useLocation();
-  // console.log ("DiveMalta", pathname);
   const {list} = diveMalta;
   let track = null;
   let trackPath = pathname;
@@ -55,7 +52,11 @@ export default function DiveMalta() {
 };
 
 /*
-                    <Paper sx={{m:0.5, p:1}}>
+  
+// const isMobile = !useMediaQuery("(min-width:900px)");
+  // const location = useLocation();
+  // console.log ("DiveMalta", pathname);
+  <Paper sx={{m:0.5, p:1}}>
                       <pre>{JSON.stringify(track, null, 2)}</pre>
                     </Paper>
 */

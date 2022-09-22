@@ -4,22 +4,47 @@ import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
 import {mdBody_Garmin} from "./md/mdBody_Garmin";
 
 const list = [
+
+  { 
+    value: {
+      uid: "SNK_6698as0das0002",
+      title: "L-Aħrax tal-Madonna",
+      slug: "divesites/l=ahrax-tal-madonna",
+      category: "divesites",
+      tags:["snorkelling", "family"],
+      icon: "spearo",
+      image: "/jpg/AnthraxIsland/AnthraxIsland.jpg",
+      bodyFormat: "html",
+      excerpt: "The Rdum tal-Madonna Important Bird Area comprises a 4 ha linear strip of cliffed coastline about 200 m long near L-Aħrax tal-Mellieħa, at the north-western end of the island of Malta, in the Maltese archipelago of the Mediterranean Sea. Its rugged cliffs rise from sea level, where there is much rock debris, to a height of 25 m",
+      body: "<p>The Rdum tal-Madonna Important Bird Area comprises a 4 ha linear strip of cliffed coastline about 200 m long near L-Aħrax tal-Mellieħa, at the north-western end of the island of Malta, in the Maltese archipelago of the Mediterranean Sea</p><iframe width='100%' height='315' src='https://www.youtube.com/embed/qT2e_D9vhj4?controls=0' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+      links: [
+        {
+          label: "Google Map",
+          value: "https://mapcarta.com/Campsite_1_-_Ahrax_tal-Madonna_1512822",
+        },
+        {
+          label: "jabriffa",
+          value: "https://jabriffa.wordpress.com/2018/09/04/il-madonna-tal-ahrax/",
+        },
+        
+        
+      ],
+    },
+  },
+
+
   { 
     value: {
       uid: "D_66RZ000002",
       title: "The Tugboat Rozi",
-      slug: "dives/rozi",
-      category: "dives",
+      slug: "wreck-dives/rozi",
+      category: "wreck dives",
       tags:["wreck", "shore", ],
       icon: "dive",
-      
-      order: 20,
       excerpt: "Rozi is one of the two wrecks in Cirkewwa on the northwest side of Malta, and one of the most popular dive sites in the Maltese islands. Rozi was a former tugboat that operated in Grand Harbour of Valletta. She was scuttled in 1992 as an underwater tourist attraction for submarine tours, and also became an artificial reef for scuba divers. Tugboat Rozi wreck is easily dived from the shore, and is located close to Patrol Boat P29 wreck.",
       image: "/jpg/The-Tugboat-Rozi/The-Tugboat-Rozi.jpg",
       bodyFormat: "md",
       body: mdBody_Rozi,
-      zoom: 12,
-      center: [14.18, 35.74],
       links: [
         {
           label: "Wikipedia",
@@ -40,18 +65,15 @@ const list = [
   { 
     value: {
       uid: "P_0000000021",
-      title: "Maltese Islands Dive Guide",
-      slug: "history/malta-dive-guide",
-      category: "history",
-      tags: ["book", "education"],
+      title: "Maltese Islands Diving Guide",
+      slug: "maltese-islands-diving-guide",
+      category: "education",
+      tags: ["history"],
       icon: "dive",
-      order: 10,
       excerpt: "This app is based on the book _Maltese Islands Dives Guide_ published in 1997 by Ned Middleton",
       image: "/jpg/Maltese-Islands-Diving-Guide/Maltese-Islands-Diving-Guide_800.jpg",
       bodyFormat: "md",
       body: mdBody_DiveGuide,
-      zoom: 9.6,
-      center: [14.38, 35.94],
       links:[
         {label: "Amazon", value: "https://" },
       ],
@@ -79,7 +101,7 @@ const list = [
       value: {
         uid: "DM_00000asdf21",
         slug: "diveshops/abc-diving",
-        category: "advert",
+        category: "diveshops",
         tags: ["rental", "guided diving", "courses"],
         icon: "diveshop",
         title: "ABC Diving",
@@ -94,11 +116,11 @@ const list = [
     { 
     value: {
       uid: "ABC_000000001",
-      slug: "dives/umelfaroud",
-      category: "Dives",
+      title: "The Um El Faroud wreck",
+      slug: "wreck-dives/umelfaroud",
+      category: "wreck dives",
       tags: ["shore", "wreck"],
       icon: "dive",
-      title: "Um El Faroud",
       excerpt: "MV Um El Faroud was a Libyan oil tanker that was scuttled off the coast of Wied iz-Zurrieq in 1998 as an artificial reef and a scuba Dives attraction, after suffering damage in an explosion at the dry docks.",
       image: "/jpg/UmElFaroud/UmElFaroud.jpg",
       bodyFormat: "md",
@@ -138,7 +160,6 @@ const list = [
         icon: "spearo",
         category: "spearfishing",
         tags: ["regulations"],
-        order: 40,
         image: "/jpg/Spearfishing/Spearfishing.jpg",
         excerpt: "With no boat",
         bodyFormat: "text",
@@ -185,10 +206,10 @@ const list = [
         image: "/jpg/Decathlon/Decathlon.jpg",
         bodyFormat: "md",
         tags:["Shopping"],
-        body: "> TO SUSTAINABLY MAKE THE PLEASURE AND BENEFITS OF SPORT ACCESSIBLE TO THE MANY",
+        body: "TO SUSTAINABLY MAKE THE PLEASURE AND BENEFITS OF SPORT ACCESSIBLE TO THE MANY",
         links: [
           {
-            label: "Decathlon",
+            label: "Decathlon Shop, Malta",
             value: "https://www.decathlon.mt",
           }
         ],
