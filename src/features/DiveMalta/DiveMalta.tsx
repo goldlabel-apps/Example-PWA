@@ -42,8 +42,8 @@ export default function DiveMalta() {
                             </React.Fragment> 
                     :
                     <React.Fragment>
-                      <Category />
                       <Featured />
+                      <Category />
                     </React.Fragment>}
               </Grid>
             </Grid>

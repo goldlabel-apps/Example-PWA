@@ -2,6 +2,7 @@ import {mdBody_Rozi} from "./md/mdBody_Rozi";
 import {mdBody_DiveGuide} from "./md/mdBody_DiveGuide";
 import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
 import {mdBody_Garmin} from "./md/mdBody_Garmin";
+import {mdBody_Octopus} from "./md/mdBody_Octopus";
 
 const list = [
 
@@ -111,8 +112,20 @@ const list = [
         body: "ABC Diving is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
       },
     }, 
-
-
+    { 
+      value: {
+        uid: "DS_OC000asdf21",
+        slug: "diveshops/octopus",
+        category: "diveshops",
+        tags: ["german"],
+        icon: "diveshop",
+        title: "Octopus Garden",
+        excerpt: "DEINE DEUTSCHE TAUCHBASIS UND AUSBILDUNGSAKADEMIE AUF MALTA",
+        image: "/jpg/Octopus/Octopus.jpg",
+        bodyFormat: "md",
+        body: mdBody_Octopus,
+      },
+    }, 
     { 
     value: {
       uid: "ABC_000000001",
