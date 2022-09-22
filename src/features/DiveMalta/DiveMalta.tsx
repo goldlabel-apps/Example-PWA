@@ -11,7 +11,7 @@ import {
   InfiniteMenu,
   Bottombar,
   Topbar,
-  Category,
+  Home,
   Single,
   Featured,
 } from "../DiveMalta";
@@ -42,8 +42,7 @@ export default function DiveMalta() {
                             </React.Fragment> 
                     :
                     <React.Fragment>
-                      <Featured />
-                      <Category />
+                      <Home />
                     </React.Fragment>}
               </Grid>
             </Grid>

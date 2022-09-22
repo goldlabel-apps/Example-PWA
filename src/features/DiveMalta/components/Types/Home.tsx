@@ -14,12 +14,14 @@ import {
   Icon,
   routeTo,
 } from "../../../Shared";
-
+import {
+  Featured,
+} from "../../../DiveMalta";
 export default function Category() {
   const dispatch = useFeatureDispatch();
   const diveMalta = useFeatureSelect( selectDiveMalta );
   const {list} = diveMalta;
-  // console.log ("list", list);
+// console.log ("list", list);
 /* 
 let secondaryText = <React.Fragment>
                           {category ? category.toString() : null}
@@ -41,6 +43,7 @@ let secondaryText = <React.Fragment>
           image,
           slug,
         } = item.value;
+        if(i>1) return null
         return (
           <Grid item xs={12} sm={6} key={`item_${i}`}>
             <Card sx={{ m:0.5, minHeight: 100}}>
@@ -73,7 +76,8 @@ let secondaryText = <React.Fragment>
             </Card>
           </Grid>
           );
-      })}      
+      })}    
+      <Featured />  
     </Grid>
   );
 }

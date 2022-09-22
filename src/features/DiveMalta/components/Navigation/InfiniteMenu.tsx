@@ -19,6 +19,7 @@ import {
 import {
     useMediaQuery,
     Button,
+    ListItem,
     Box,
     List,
     Paper,
@@ -69,6 +70,20 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                 { open ? <Icon icon="up" /> : <Icon icon="down" /> }
             </Button> : null }
                 { open ? <Paper>
+                    <ListItem 
+                        button
+                        sx={{ mt:1}}
+                        onClick={(e:React.MouseEvent) => {
+                            e.preventDefault();
+                            dispatch(routeTo(`/`));
+                        }}>
+                        <ListItemIcon>
+                            <Icon icon="home" color="primary" />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={"Home"}
+                        />
+                    </ListItem>
                     <List id="infinite-menu">
                         { list.map((item:DMMenuItem, i: number) => {
                             const {
@@ -103,12 +118,11 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                         e.preventDefault();
                                         loadMore();
                                     }}>
-                                    
-                                    <Icon icon="tap" />
                                     <span style={{
                                         marginLeft: "8px", marginRight: "8px"}}>
-                                        {showNumber} of {list.length}. Show more?
+                                        {showNumber} of {list.length}. More?
                                     </span>
+                                    <Icon icon="tap" />
                                 </Button>  : null  }
                         </React.Fragment> : null }
                 </Paper> : null }

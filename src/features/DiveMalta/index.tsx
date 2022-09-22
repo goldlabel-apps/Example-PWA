@@ -12,13 +12,13 @@ import Bottombar from "./components/Navigation/Bottombar";
 import MenuItems from "./components/Navigation/MenuItems";
 import Topbar from "./components/Navigation/Topbar";
 import MenuListItem from "./components/Navigation/MenuListItem";
-import Category from "./components/Types/Category";
+import Home from "./components/Types/Home";
 import Single from "./components/Types/Single";
 import Featured from "./components/Types/Featured";
 
 export {
   DiveMalta,
-  Category,
+  Home,
   MenuListItem,
   InfiniteMenu,
   Single,
