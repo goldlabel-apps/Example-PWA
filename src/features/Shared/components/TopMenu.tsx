@@ -8,7 +8,6 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material"
-import { Link } from 'react-router-dom' 
 import {
   Icon,
 } from "../"
@@ -28,14 +27,12 @@ export default function TopMenu() {
 
   return (
       <Box sx={{ display: "flex", mt:3, mb:1}}>  
-        <Link to="/">
           <IconButton
             color="primary"
             sx={{ mr: 1, mt:-1.5 }}
           >
             <Icon icon="home"/>
           </IconButton>
-        </Link>
         <Box sx={{ flexGrow: 1 }} />
 
         <IconButton

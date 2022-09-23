@@ -3,8 +3,7 @@
 // https://mui.com/components/material-icons/
 import * as React from "react"
 import DefaultIcon from "@mui/icons-material/DisabledByDefault"
-
-import HomeIcon from "@mui/icons-material/Home"
+import HomeIcon from "@mui/icons-material/HomeOutlined";
 import ShoppingIcon from "@mui/icons-material/ShoppingBag";
 import EmailIcon from "@mui/icons-material/Email";
 import InfiniteMenuIcon from "@mui/icons-material/LinearScale";

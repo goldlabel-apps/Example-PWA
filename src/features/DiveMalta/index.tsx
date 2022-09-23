@@ -12,10 +12,10 @@ import Bottombar from "./components/Navigation/Bottombar";
 import MenuItems from "./components/Navigation/MenuItems";
 import Topbar from "./components/Navigation/Topbar";
 import MenuListItem from "./components/Navigation/MenuListItem";
-import Home from "./components/Types/Home";
-import ItemCard from "./components/Types/ItemCard";
-import Single from "./components/Types/Single";
-import Featured from "./components/Types/Featured";
+import Home from "./components/Pages/Home";
+import ItemCard from "./components/Pages/ItemCard";
+import Single from "./components/Pages/Single";
+import Featured from "./components/Pages/Featured";
 
 export {
   DiveMalta,

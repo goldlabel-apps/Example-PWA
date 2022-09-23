@@ -78,7 +78,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                             dispatch(routeTo(`/`));
                         }}>
                         <ListItemIcon>
-                            <Icon icon="home" color="primary" />
+                            <Icon icon="home" color="secondary" />
                         </ListItemIcon>
                         <ListItemText
                             primary={"Home"}
@@ -90,7 +90,6 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                 title,
                                 icon,
                                 slug,
-                                // category,
                             } = item.value;
                             if (i >= showNumber) return null
                             return (<MenuItem 
@@ -100,7 +99,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                             dispatch(routeTo(`/${slug}`));
                                         }}>
                                         <ListItemIcon>
-                                            <Icon icon={icon} color="primary" />
+                                            <Icon icon={icon} color="secondary" />
                                         </ListItemIcon>
                                         <ListItemText
                                             primary={title}
@@ -108,8 +107,9 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                     </MenuItem>);
                         })}
                     </List>
-                    {open ? <React.Fragment>
+                    {open ? <Box sx={{display:"flex"}}>
                                 { list.length > showNumber ? <Button
+                                    sx={{m:0.5}}
                                     id="infinite-button"
                                     fullWidth
                                     variant="contained"
@@ -124,27 +124,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                     </span>
                                     <Icon icon="tap" />
                                 </Button>  : null  }
-                        </React.Fragment> : null }
-
-
-                        <Button
-                            id="infinite-button"
-                            fullWidth
-                            variant="contained"
-                            color="primary"
-                            onClick={(e: React.MouseEvent) => {
-                                e.preventDefault();
-                                loadMore();
-                            }}>
-                            <span style={{
-                                marginLeft: "8px", marginRight: "8px"}}>
-                                {showNumber} of {list.length}. More?
-                            </span>
-                            <Icon icon="tap" />
-                        </Button>
-
-
-
+                        </Box> : null }
                 </Paper> : null }
             </Box>
         </Box>

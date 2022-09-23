@@ -19,7 +19,7 @@ export default function Featured() {
   const pathABC = "/diveshops/abc-diving";
   const pathOctopus = "/diveshops/octopus";
   return (<React.Fragment>
-    <Card sx={{ m:0.5, flexGrow:1 }}>
+    <Card sx={{ m:0.5, mt:1, flexGrow:1 }}>
       <CardHeader 
         title={<React.Fragment>
                 <Typography variant="body1">
@@ -67,7 +67,7 @@ export default function Featured() {
       />
     </Card>
 
-    <Card sx={{ m:0.5, flexGrow:1 }}>
+    <Card sx={{ m:0.5, mt:1, mb:1, flexGrow:1 }}>
       <CardHeader 
         title={<React.Fragment>
                 <Typography variant="body1">

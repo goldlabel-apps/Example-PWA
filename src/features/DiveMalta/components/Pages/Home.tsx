@@ -5,7 +5,6 @@ import {
 } from "../../../Shared/store/hooks";
 import { selectDiveMalta } from '../../';
 import {
-  Box,
   Grid,
   Card,
   CardHeader,
@@ -40,7 +39,7 @@ export default function Category() {
             <Card sx={{ m:0.5, minHeight: 100}}>
               <CardHeader
                 avatar={<React.Fragment>
-                          <Icon icon={icon} />
+                          <Icon icon={icon} color="secondary" />
                         </React.Fragment>}
                 title={title}
                 subheader={tags ? tags.toString() : null }
@@ -59,12 +58,13 @@ export default function Category() {
           </Grid>
           );
       })}    
+
       { list.map((item: any, i: number) => {
         if(i<1 || i>fold) return null
         return <ItemCard key={`item_${i}`} item={item} />;
       })};
 
-      <Grid item xs={12} sx={{m:0, p:0}}>
+      <Grid item xs={12} sx={{m:-0.6}}>
         <Featured />
       </Grid>
       
