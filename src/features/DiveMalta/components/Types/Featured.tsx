@@ -19,26 +19,23 @@ export default function Featured() {
   const pathABC = "/diveshops/abc-diving";
   const pathOctopus = "/diveshops/octopus";
   return (<React.Fragment>
-    
     <Card sx={{ m:0.5, flexGrow:1 }}>
       <CardHeader 
         title={<React.Fragment>
                 <Typography variant="body1">
-                  
                     <Link
                       sx={{cursor: "pointer"}}
                       onClick={(e:React.MouseEvent) => {
                         e.preventDefault();
                         dispatch(routeTo(pathABC));
-                      }}
-                    >
+                      }}>
                       {`ABC Diving, Malta`}
                     </Link>
               </Typography>
             </React.Fragment>}
         subheader={<React.Fragment>
               <Typography variant="body2">
-              Bespoke PADI dive centre set in an idyllic waterfront location
+                Bespoke PADI dive centre set in an idyllic waterfront location
               </Typography>
             </React.Fragment>}
         action={<React.Fragment>
@@ -91,24 +88,23 @@ export default function Featured() {
                       </Typography>
                     </React.Fragment>}
         action={<React.Fragment>
-          
-          <IconButton 
-            color="primary"
-            onClick={(e: React.MouseEvent) => {
-              e.preventDefault();
-              window.open("mailto:info@pathOctopus", "_blank");
-            }}>
-              <Icon icon="email"/>
-          </IconButton>
-          <IconButton 
-            color="primary"
-            onClick={(e: React.MouseEvent) => {
-              e.preventDefault();
-              window.open("https://octopus-garden.net", "_blank");
-            }}>
-              <Icon icon="site"/>
-          </IconButton>
-        </React.Fragment>}
+                  <IconButton 
+                    color="primary"
+                    onClick={(e: React.MouseEvent) => {
+                      e.preventDefault();
+                      window.open("mailto:info@pathOctopus", "_blank");
+                    }}>
+                      <Icon icon="email"/>
+                  </IconButton>
+                  <IconButton 
+                    color="primary"
+                    onClick={(e: React.MouseEvent) => {
+                      e.preventDefault();
+                      window.open("https://octopus-garden.net", "_blank");
+                    }}>
+                      <Icon icon="site"/>
+                  </IconButton>
+                </React.Fragment>}
       />
     </Card>
 

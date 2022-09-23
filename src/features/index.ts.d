@@ -1,6 +1,8 @@
 // Type definitions for features
 // Definitions by: Chris D <https://github.com/listingslab>
 
+
+
 export interface NotifyShape {
     severity: string,
     code: number | string

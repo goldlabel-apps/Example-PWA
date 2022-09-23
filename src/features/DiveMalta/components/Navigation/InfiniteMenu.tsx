@@ -41,7 +41,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
     if (showInfiniteMenu) open = true;
 
     const loadMore = () =>{
-        dispatch(increaseShowNumber({by:1, max: list.length}));
+        dispatch(increaseShowNumber({by:2, max: list.length}));
     };
 
     const menuButtonClick = () => {
@@ -112,8 +112,8 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                 { list.length > showNumber ? <Button
                                     id="infinite-button"
                                     fullWidth
-                                    variant="text"
-                                    color="primary"
+                                    variant="contained"
+                                    color="secondary"
                                     onClick={(e: React.MouseEvent) => {
                                         e.preventDefault();
                                         loadMore();
@@ -125,6 +125,26 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                                     <Icon icon="tap" />
                                 </Button>  : null  }
                         </React.Fragment> : null }
+
+
+                        <Button
+                            id="infinite-button"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                            onClick={(e: React.MouseEvent) => {
+                                e.preventDefault();
+                                loadMore();
+                            }}>
+                            <span style={{
+                                marginLeft: "8px", marginRight: "8px"}}>
+                                {showNumber} of {list.length}. More?
+                            </span>
+                            <Icon icon="tap" />
+                        </Button>
+
+
+
                 </Paper> : null }
             </Box>
         </Box>

@@ -8,7 +8,7 @@ export const theme = () => {
   const themeObj = {
     paperBg: "#FFFFFF",
     primaryMain: "rgba(2,65,105,1)",
-    secondaryMain: "#00a4e1",
+    secondaryMain: "#0062a7",
   };
   
   const { paperBg, primaryMain, secondaryMain } = themeObj

@@ -6,6 +6,10 @@ export interface DiveMalta {
   extras?: string[];
 }
 
+export interface DiveMaltaItem {
+  uid: string,
+}
+
 export type InfiniteMenuShape = {
   defaultOpen?: boolean;
 }
