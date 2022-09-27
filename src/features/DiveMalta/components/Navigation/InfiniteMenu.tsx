@@ -80,9 +80,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                         <ListItemIcon>
                             <Icon icon="home" color="secondary" />
                         </ListItemIcon>
-                        <ListItemText
-                            primary={"Home"}
-                        />
+                        
                     </ListItem>
                     <List id="infinite-menu">
                         { list.map((item:DMMenuItem, i: number) => {

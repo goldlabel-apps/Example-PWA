@@ -29,6 +29,7 @@ export default function Category() {
         const {
           icon,
           title,
+          excerpt,
           tags,
           image,
           slug,
@@ -49,7 +50,7 @@ export default function Category() {
                   component="img"
                   height="175"
                   image={image}
-                  alt="ABC Diving, Malta"
+                  alt={excerpt}
                   onClick={(e: React.MouseEvent) => {
                     e.preventDefault();
                     dispatch(routeTo(`/${slug}`));
@@ -60,7 +61,9 @@ export default function Category() {
       })}    
 
       { list.map((item: any, i: number) => {
-        if(i<1 || i>fold) return null
+        if(i<=1 || i>=fold) return null
+        const {category} = item.value;
+        if (category === "diveshops") return null;
         return <ItemCard key={`item_${i}`} item={item} />;
       })};
 
@@ -69,7 +72,10 @@ export default function Category() {
       </Grid>
       
       { list.map((item: any, i: number) => {
-        if(i<fold) return null
+        if(i<=fold) return null
+        if(i<=1 || i>=fold) return null
+        const {category} = item.value;
+        if (category === "diveshops") return null;
         return <ItemCard key={`item_${i}`} item={item} />;
       })};
 
