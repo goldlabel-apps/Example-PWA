@@ -6,6 +6,25 @@ import {mdBody_Octopus} from "./md/mdBody_Octopus";
 import {mdBody_SOHOHike} from "./md/mdBody_SOHOHike";
 
 const list = [
+
+  { 
+    value: {
+      uid: "P_0000000021",
+      title: "Maltese Islands Diving Guide",
+      slug: "maltese-islands-diving-guide",
+      category: "education",
+      tags: ["history"],
+      icon: "dive",
+      excerpt: "This app is based on the book _Maltese Islands Dives Guide_ published in 1997 by Ned Middleton",
+      image: "/jpg/Maltese-Islands-Diving-Guide/Maltese-Islands-Diving-Guide_800.jpg",
+      bodyFormat: "md",
+      body: mdBody_DiveGuide,
+      links:[
+        {label: "Amazon", value: "https://" },
+      ],
+    },
+  }, 
+  
   {
     value: {
       uid: "H_959493095",
@@ -95,23 +114,6 @@ const list = [
     },
   },
 
-  { 
-    value: {
-      uid: "P_0000000021",
-      title: "Maltese Islands Diving Guide",
-      slug: "maltese-islands-diving-guide",
-      category: "education",
-      tags: ["history"],
-      icon: "dive",
-      excerpt: "This app is based on the book _Maltese Islands Dives Guide_ published in 1997 by Ned Middleton",
-      image: "/jpg/Maltese-Islands-Diving-Guide/Maltese-Islands-Diving-Guide_800.jpg",
-      bodyFormat: "md",
-      body: mdBody_DiveGuide,
-      links:[
-        {label: "Amazon", value: "https://" },
-      ],
-    },
-  },  
 
   { 
     value: {

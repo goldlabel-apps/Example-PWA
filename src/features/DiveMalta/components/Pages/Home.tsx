@@ -22,9 +22,12 @@ export default function Category() {
   const dispatch = useFeatureDispatch();
   const diveMalta = useFeatureSelect( selectDiveMalta );
   const {list} = diveMalta;
-  const fold = 8;
+  const fold = 12;
   return (
     <Grid container>
+      <Grid item xs={12}sx={{mt:0.5}}>
+        <Featured />
+      </Grid>
       { list.map((item: any, i: number) => {
         const {
           icon,
@@ -34,7 +37,7 @@ export default function Category() {
           image,
           slug,
         } = item.value;
-        if(i>1) return null
+        if(i>3) return null
         return (
           <Grid item xs={12} sm={6} key={`item_${i}`} sx={{mt:0.5}}>
             <Card sx={{ m:0.5, minHeight: 100}}>
@@ -66,11 +69,6 @@ export default function Category() {
         if (category === "diveshops") return null;
         return <ItemCard key={`item_${i}`} item={item} />;
       })};
-
-      <Grid item xs={12} sx={{m:-0.6}}>
-        <Featured />
-      </Grid>
-      
       { list.map((item: any, i: number) => {
         if(i<=fold) return null
         if(i<=1 || i>=fold) return null
