@@ -28,13 +28,13 @@ const list = [
   {
     value: {
       uid: "H_959493095",
-      title: "SOHO Hike ",
+      title: "Siġġiewi to Dingli Lookout Loop",
+      excerpt: "SOHO Hike",
       slug: "hikes/soho-hike",
       category: "non divers",
       tags:["cliffs", "churches"],
       icon: "hike",
       image: "/jpg/SOHOHike/SOHOHike.jpg",
-      excerpt: "Siġġiewi to Dingli Lookout Loop",
       bodyFormat: "html",
       body: mdBody_SOHOHike,
       links: [
