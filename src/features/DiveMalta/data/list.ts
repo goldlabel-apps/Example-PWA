@@ -3,8 +3,33 @@ import {mdBody_DiveGuide} from "./md/mdBody_DiveGuide";
 import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
 import {mdBody_Garmin} from "./md/mdBody_Garmin";
 import {mdBody_Octopus} from "./md/mdBody_Octopus";
+import {mdBody_SOHOHike} from "./md/mdBody_SOHOHike";
 
 const list = [
+  {
+    value: {
+      uid: "H_959493095",
+      title: "SOHO Hike ",
+      slug: "hikes/soho-hike",
+      category: "non divers",
+      tags:["cliffs", "churches"],
+      icon: "hike",
+      image: "/jpg/SOHOHike/SOHOHike.jpg",
+      excerpt: "Siġġiewi to Dingli Lookout Loop",
+      bodyFormat: "html",
+      body: mdBody_SOHOHike,
+      links: [
+        {
+          label: "SOHO Office Space, Malta",
+          value: "https://sohomalta.com",
+        },
+        {
+          label: "komoot.com",
+          value: "https://www.komoot.com/tour/959493095",
+        },
+      ],
+    },
+  },
   {
     value: {
       uid: "D_0AB3000002",

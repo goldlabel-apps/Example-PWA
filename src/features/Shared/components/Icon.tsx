@@ -10,6 +10,7 @@ import InfiniteMenuIcon from "@mui/icons-material/LinearScale";
 import DiveShopIcon from "@mui/icons-material/BeachAccess";
 import TapIcon from "@mui/icons-material/TouchApp";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import HikeAppIcon from "@mui/icons-material/HikingRounded";
 import SitesIcon from "@mui/icons-material/Language"
 import SpearoIcon from "@mui/icons-material/Pool"
 import InitIcon from "@mui/icons-material/NotStarted"
@@ -143,6 +144,13 @@ export default function Icon(props: any) {
       case "imenu":
         iconFragment = <InfiniteMenuIcon color={color} />
         break
+
+      
+        case "hike":
+          iconFragment = <HikeAppIcon color={color} />
+          break
+
+        
 
       case "notify":
         iconFragment = <NotifyIcon color={color} />
