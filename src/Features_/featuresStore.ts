@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
-import sharedReducer from '../features/Shared/store/slice'
-import divemaltaReducer from '../features/DiveMalta/store/slice'
+import sharedReducer from '../Features/Shared/store/slice'
+import divemaltaReducer from '../Features/DiveMalta/store/slice'
 
 export const featuresStore = configureStore({
   reducer: {

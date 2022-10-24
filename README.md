@@ -24,7 +24,7 @@ import {
   BrowserRouter as Router 
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { featuresStore } from './features/featuresStore';
+import { featuresStore } from './Features/featuresStore';
 import { 
   Grid, Container, createTheme, 
   ThemeProvider, CssBaseline,
@@ -33,7 +33,7 @@ import {
   Shared,
   TopMenu,
   theme,
-} from "./features/Shared";
+} from "./Features/Shared";
 
 console.warn(`${process.env.REACT_APP_NAME} ${process.env.REACT_APP_VERSION}`);
 
