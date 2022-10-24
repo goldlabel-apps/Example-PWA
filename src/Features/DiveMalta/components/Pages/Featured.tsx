@@ -1,23 +1,26 @@
 import * as React from 'react';
 import {
-  useFeatureDispatch,
-} from "../../../Shared/store/hooks";
-import {
   ABCDiving,
   SOHO,
+  Octopus,
 } from "../../";
 
 export default function Featured() {
-  const dispatch = useFeatureDispatch();
-  const pathABC = "/diveshops/abc-diving";
-  const pathOctopus = "/diveshops/octopus";
-  const pathSoho = "/hikes/soho-hike";
+  const ran = Math.floor(Math.random() * 3);
+  let ad = <React.Fragment></React.Fragment>;
+  switch (ran) {
+    case 0:
+      ad = <ABCDiving />;
+      break;
+    case 1:
+      ad = <SOHO />;
+      break;
+    case 2:
+      ad = <Octopus />;
+      break;
+  };
   return (<React.Fragment>
-            <SOHO />
+            {ad}
           </React.Fragment>
   );
 }
-
-/*
-<ABCDiving />
-*/

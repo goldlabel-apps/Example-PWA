@@ -22,7 +22,7 @@ export default function ItemCard(props: any ) {
   } = props.item.value;
   return (
     <Grid item xs={12} sm={6}>
-      <Card sx={{ m:0.5, cursor:"pointer"}}
+      <Card sx={{ cursor:"pointer"}}
         onClick={()=>{
           console.log("cardClick");
           dispatch(routeTo(slug));
