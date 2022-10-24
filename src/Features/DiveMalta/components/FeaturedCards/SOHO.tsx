@@ -19,7 +19,7 @@ export default function SOHO() {
   const dispatch = useFeatureDispatch();
   const pathSoho = "/hikes/soho-hike";
 
-  return ( <Card sx={{ m:0.5, mt:1, mb:1, flexGrow:1 }}>
+  return ( <Card sx={{ m:0.5, mt:1.5, mb:1, flexGrow:1 }}>
     <CardHeader 
       avatar={<IconButton
                 color="secondary"

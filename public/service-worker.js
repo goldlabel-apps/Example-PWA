@@ -1,6 +1,6 @@
 const PRECACHE = 'precache-v3.1.6b';
 const RUNTIME = 'runtime';
-console.log("DM Service Worker 3.1.6c");
+// console.log("DM Service Worker");
 
 const PRECACHE_URLS = [
   'index.html',

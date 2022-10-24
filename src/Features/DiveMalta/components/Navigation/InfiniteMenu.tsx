@@ -19,7 +19,6 @@ import {
 import {
     useMediaQuery,
     Button,
-    ListItem,
     Box,
     List,
     Paper,
@@ -30,12 +29,9 @@ import {
 
 export default function InfiniteMenu(props:InfiniteMenuShape) {
     let open = true;
-    // let isProd = true;
     const dispatch = useFeatureDispatch();
     const diveMalta = useFeatureSelect( selectDiveMalta );
     const {list, showInfiniteMenu, showNumber} = diveMalta;
-    // const host = window.location.host;
-    // if (host !== process.env.REACT_APP_PROD_HOST) isProd = false;
     const isMobile = !useMediaQuery("(min-width:900px)");
     if(isMobile) open = false;
     if (showInfiniteMenu) open = true;

@@ -19,7 +19,7 @@ export default function ABCDiving() {
   const dispatch = useFeatureDispatch();
   const pathABC = "/diveshops/abc-diving";
 
-  return ( <Card sx={{ m:0.5, mt:1, flexGrow:1 }}>
+  return ( <Card sx={{ m:0.5, mt:1.5, mb:1, flexGrow:1 }}>
       <CardHeader 
         avatar={<IconButton
                   color="secondary"

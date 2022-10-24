@@ -37,7 +37,7 @@ export default function Single(props:any) {
   if (setMode) mode = setMode;
 
   return (
-    <Box sx={{m:0.5}}>
+    <Box sx={{m:0.5,mt:1.5}}>
       <Card sx={{ width: "100%" }}>
         <CardHeader
           title={title}

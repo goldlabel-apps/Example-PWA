@@ -25,7 +25,7 @@ export default function Category() {
   const fold = 12;
   return (
     <Grid container>
-      <Grid item xs={12}sx={{mt:0.5}}>
+      <Grid item xs={12}>
         <Featured />
       </Grid>
       { list.map((item: any, i: number) => {
@@ -41,7 +41,7 @@ export default function Category() {
         if(i>3) return null;
 
         return (
-          <Grid item xs={12} sm={6} key={`item_${i}`} sx={{mt:0.5}}>
+          <Grid item xs={12} sm={6} key={`item_${i}`}>
             <Card sx={{ m:0.5, minHeight: 100}}>
               <CardHeader
                 avatar={<React.Fragment>
@@ -71,14 +71,7 @@ export default function Category() {
         if (category === "diveshops") return null;
         return <ItemCard key={`item_${i}`} item={item} />;
       })};
-      { list.map((item: any, i: number) => {
-        if(i<=fold) return null
-        if(i<=1 || i>=fold) return null
-        const {category} = item.value;
-        if (category === "diveshops") return null;
-        return <ItemCard key={`item_${i}`} item={item} />;
-      })};
-
+      
     </Grid>
   );
 }
