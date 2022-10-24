@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { featuresStore } from './features/featuresStore';
+import { featuresStore } from './Features/featuresStore';
 import {
   Container,
   createTheme, 
@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import { 
   Shared,
-} from "./features/Shared";
-import {theme} from "./features/DiveMalta/theme/theme";
-import {DiveMalta} from "./features/DiveMalta";
+} from "./Features/Shared";
+import {theme} from "./Features/DiveMalta/theme/theme";
+import {DiveMalta} from "./Features/DiveMalta";
 
 console.warn(`${process.env.REACT_APP_NAME} ${process.env.REACT_APP_VERSION} ${process.env.REACT_APP_ENV}`);
 

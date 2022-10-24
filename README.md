@@ -1,24 +1,11 @@
-## divemalta.app
+## Dive Malta App
 
-#### Garmin Descent™ Mk1
+> Free, Open Source Progressive Web App 
 
-![Garmin Descent™ Mk1](https://res.garmin.com/en/products/010-01760-00/v/cf-lg.jpg)
+#### PWA
 
-> Versatile GPS Dive Computer for Your Diving Adventures
+_Story_ As a user I want a React Progressive Web App using React & Material UI to use data created with my [Garmin Descent™ Mk1](https://www.garmin.com/en-US/p/568181) (You can create compatable data (.gpx) with pretty much any smart device for free), Upload, View, Edit & Share Geodata 
 
-- Premium full-featured dive computer with surface GPS in a sleek watch-style design; with bright 1.2” color display and TOPO mapping
-- Built-in sensors include 3-axis compass, gyroscope and barometric altimeter as well as GPS and GLONASS capability that lets you mark your dive entry and exit points¹ for surface navigation
-- Choose modes for single and multiple gas dives (including nitrox and trimix), gauge, apnea and closed circuit rebreather (CCR); plan your dives directly on the device
-- Dive log lets you store and review data from up to 200 dives — and share online via Garmin Connect™ and its included mobile app
-- Features Elevate™ wrist heart rate technology² with multisport activity profiles, performance metrics and smart notifications³
-- Battery life: up to 19 days in watch mode, 10 days in smartwatch mode, 40 hours in dive mode and 20 hours in GPS mode
-
-
-#### The App
-
-This is a React Progressive Web App. It uses data created with a [Garmin Descent™ Mk1](https://www.garmin.com/en-US/p/568181). You can create compatable data (.gpx) with pretty much any smart device for free. Upload and make it more fun here
-
-> View, Edit & Share Geodata using React & Material UI
 
 ```html
 <noscript>You'll need a _lot_ more JavaScript to run this</noscript>
@@ -37,7 +24,7 @@ import {
   BrowserRouter as Router 
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { featuresStore } from './features/featuresStore';
+import { featuresStore } from './Features/featuresStore';
 import { 
   Grid, Container, createTheme, 
   ThemeProvider, CssBaseline,
@@ -46,7 +33,7 @@ import {
   Shared,
   TopMenu,
   theme,
-} from "./features/Shared";
+} from "./Features/Shared";
 
 console.warn(`${process.env.REACT_APP_NAME} ${process.env.REACT_APP_VERSION}`);
 
@@ -57,3 +44,16 @@ const root = ReactDOM.createRoot(
 )
 ...
 ```
+
+#### Garmin Descent™ Mk1
+
+![Garmin Descent™ Mk1](https://res.garmin.com/en/products/010-01760-00/v/cf-lg.jpg)
+
+> Versatile GPS Dive Computer for Your Diving Adventures
+
+- Premium full-featured dive computer with surface GPS in a sleek watch-style design; with bright 1.2” color display and TOPO mapping
+- Built-in sensors include 3-axis compass, gyroscope and barometric altimeter as well as GPS and GLONASS capability that lets you mark your dive entry and exit points¹ for surface navigation
+- Choose modes for single and multiple gas dives (including nitrox and trimix), gauge, apnea and closed circuit rebreather (CCR); plan your dives directly on the device
+- Dive log lets you store and review data from up to 200 dives — and share online via Garmin Connect™ and its included mobile app
+- Features Elevate™ wrist heart rate technology² with multisport activity profiles, performance metrics and smart notifications³
+- Battery life: up to 19 days in watch mode, 10 days in smartwatch mode, 40 hours in dive mode and 20 hours in GPS mode
