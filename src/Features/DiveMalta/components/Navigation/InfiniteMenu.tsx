@@ -49,7 +49,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
     };
 
     return (
-        <Box sx={{m:0.5, mt:1}}>
+        <Box sx={{m:0.5, mt:1.5}}>
             <Box sx={{m:0.5}}>
             {isMobile ? <Button
                 fullWidth
