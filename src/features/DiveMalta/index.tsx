@@ -17,8 +17,15 @@ import ItemCard from "./components/Pages/ItemCard";
 import Single from "./components/Pages/Single";
 import Featured from "./components/Pages/Featured";
 
+import ABCDiving from "./components/FeaturedCards/ABCDiving";
+import Octopus from "./components/FeaturedCards/Octopus";
+import SOHO from "./components/FeaturedCards/SOHO";
+
 export {
   DiveMalta,
+  ABCDiving,
+  Octopus,
+  SOHO,
   Home,
   ItemCard,
   MenuListItem,

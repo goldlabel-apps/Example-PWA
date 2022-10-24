@@ -29,6 +29,7 @@ export default function Category() {
         <Featured />
       </Grid>
       { list.map((item: any, i: number) => {
+        
         const {
           icon,
           title,
@@ -37,7 +38,8 @@ export default function Category() {
           image,
           slug,
         } = item.value;
-        if(i>3) return null
+        if(i>3) return null;
+
         return (
           <Grid item xs={12} sm={6} key={`item_${i}`} sx={{mt:0.5}}>
             <Card sx={{ m:0.5, minHeight: 100}}>

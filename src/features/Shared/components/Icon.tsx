@@ -4,10 +4,10 @@
 import * as React from "react"
 import DefaultIcon from "@mui/icons-material/DisabledByDefault"
 import HomeIcon from "@mui/icons-material/HomeOutlined";
-import ShoppingIcon from "@mui/icons-material/ShoppingBag";
+import ShoppingIcon from "@mui/icons-material/ShoppingBagOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import InfiniteMenuIcon from "@mui/icons-material/LinearScale";
-import DiveShopIcon from "@mui/icons-material/BeachAccess";
+import DiveShopIcon from "@mui/icons-material/ShoppingBag";
 import TapIcon from "@mui/icons-material/TouchApp";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import HikeAppIcon from "@mui/icons-material/HikingRounded";

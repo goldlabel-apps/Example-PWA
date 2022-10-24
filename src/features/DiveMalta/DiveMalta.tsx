@@ -37,8 +37,8 @@ export default function DiveMalta() {
               </Grid>
               <Grid item xs={12} md={8}>
                   {track ? <React.Fragment>
-                              <Single track={track} />
                               <Featured />
+                              <Single track={track} />
                             </React.Fragment> 
                     :
                     <React.Fragment>

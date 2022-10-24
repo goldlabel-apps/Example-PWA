@@ -49,7 +49,7 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
     };
 
     return (
-        <Box sx={{m:0.5}}>
+        <Box sx={{m:0.5, mt:1}}>
             <Box sx={{m:0.5}}>
             {isMobile ? <Button
                 fullWidth
@@ -70,18 +70,6 @@ export default function InfiniteMenu(props:InfiniteMenuShape) {
                 { open ? <Icon icon="up" /> : <Icon icon="down" /> }
             </Button> : null }
                 { open ? <Paper>
-                    <ListItem 
-                        button
-                        sx={{ mt:1}}
-                        onClick={(e:React.MouseEvent) => {
-                            e.preventDefault();
-                            dispatch(routeTo(`/`));
-                        }}>
-                        <ListItemIcon>
-                            <Icon icon="home" color="secondary" />
-                        </ListItemIcon>
-                        
-                    </ListItem>
                     <List id="infinite-menu">
                         { list.map((item:DMMenuItem, i: number) => {
                             const {

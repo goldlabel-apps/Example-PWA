@@ -40,13 +40,15 @@ export default function Single(props:any) {
     <Box sx={{m:0.5}}>
       <Card sx={{ width: "100%" }}>
         <CardHeader
+          title={title}
+          subheader={subheader}
           avatar={<React.Fragment>
             { mode === "single" ? <IconButton
                     onClick={() => {
                       window.open("/", "_self");
                     }}
                   >
-                    <Icon icon={"left"} color="primary" />
+                    <Icon icon={"home"} color="primary" />
                   </IconButton> : null }
 
                   <IconButton
@@ -58,19 +60,6 @@ export default function Single(props:any) {
                     <Icon icon={icon} color="primary" />
                   </IconButton>
                 </React.Fragment>}
-
-          // action={ mode !== "single" ? <React.Fragment>
-          //           <ExpandMore
-          //             expand={expanded}
-          //             onClick={handleExpandClick}
-          //             aria-expanded={expanded}
-          //             aria-label="show more"
-          //           >
-          //             <Icon icon="acc" color="primary" />
-          //           </ExpandMore>
-          //           </React.Fragment> : null}
-          title={ title }
-          subheader={subheader}
         />
 
         { hasImage ? <CardMedia

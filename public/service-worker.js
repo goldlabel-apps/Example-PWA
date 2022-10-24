@@ -9,7 +9,7 @@ const PRECACHE_URLS = [
 ];
 
 self.addEventListener('install', event => {
-  console.log("DM install");
+  console.log("Dive Malta installed.");
   event.waitUntil(
     caches.open(PRECACHE)
       .then(cache => cache.addAll(PRECACHE_URLS))
@@ -18,7 +18,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-  console.log("DM activate");
+  // console.log("DM activate");
   const currentCaches = [PRECACHE, RUNTIME];
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -32,7 +32,7 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  console.log("DM fetch");
+  // console.log("DM fetch");
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {

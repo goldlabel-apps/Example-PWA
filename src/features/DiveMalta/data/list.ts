@@ -28,7 +28,7 @@ const list = [
   {
     value: {
       uid: "H_959493095",
-      title: "Siġġiewi to Dingli Lookout Loop",
+      title: "Siġġiewi to Dingli Lookout Hike",
       excerpt: "SOHO Hike",
       slug: "hikes/soho-hike",
       category: "non divers",
@@ -49,20 +49,45 @@ const list = [
       ],
     },
   },
-  {
+
+  { 
     value: {
-      uid: "D_0AB3000002",
-      title: "Anchor Bay (Popeye)",
-      slug: "dives/anchor-bay",
-      category: "dives",
-      tags:["cave", "wreck"],
+      uid: "DM_00000asdf21",
+      slug: "diveshops/abc-diving",
+      category: "diveshops",
+      tags: ["rental", "guided diving", "courses"],
+      icon: "diveshop",
+      title: "ABC Diving",
+      excerpt: "Small, bespoke PADI dive centre set in an idyllic waterfront location",
+      image: "/jpg/ABCDiving/ABCDiving.jpg",
+      bodyFormat: "md",
+      body: "ABC Diving is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
+    },
+  }, 
+  
+  { 
+    value: {
+      uid: "ABC_000000001",
+      title: "The Um El Faroud wreck",
+      slug: "wreck-dives/umelfaroud",
+      category: "wreck dives",
+      tags: ["shore", "wreck"],
       icon: "dive",
-      image: "/jpg/Anchor-Bay/Anchor-Bay_DIVEPLAN.jpg",
-      excerpt: "AKA Scorpion Cave & Popeye Village",
-      bodyFormat: "text",
-      body: "Anchor Bay Cave, also known as Scorpion Cave, is the best dive site in Anchor Bay. The cave is located on the south side of the bay, approximately 150 m from the entry/exit point at the concrete jetty",
+      excerpt: "MV Um El Faroud was a Libyan oil tanker that was scuttled off the coast of Wied iz-Zurrieq in 1998 as an artificial reef and a scuba Dives attraction, after suffering damage in an explosion at the dry docks.",
+      image: "/jpg/UmElFaroud/UmElFaroud.jpg",
+      bodyFormat: "md",
+      body: mdBody_UmElFaroud,
+      links:[
+        {label: "wikipedia.org", value: "http://en.wikipedia.org/wiki/Um_El_Faroud" },
+        {label: "maltadives.com", value: "https://maltadives.com/sites/umelfaroud-wiedizzurrieq" },
+        {label: "wrecksite.eu", value: "http://www.wrecksite.eu/wreck.aspx?97698" },
+        {label: "teesbuiltships.co.uk", value: "http://www.teesbuiltships.co.uk/view.php?ref=170647" },
+        {label: "calypsosac.org", value: "http://www.calypsosac.org/um-el-faroud/" },
+      ],
     },
   },
+
+
   { 
     value: {
       uid: "D_66RZ000002",
@@ -140,22 +165,22 @@ const list = [
     },
   },
 
-  
+  {
+    value: {
+      uid: "D_0AB3000002",
+      title: "Anchor Bay (Popeye)",
+      slug: "dives/anchor-bay",
+      category: "dives",
+      tags:["cave", "wreck"],
+      icon: "dive",
+      image: "/jpg/Anchor-Bay/Anchor-Bay_DIVEPLAN.jpg",
+      excerpt: "AKA Scorpion Cave & Popeye Village",
+      bodyFormat: "text",
+      body: "Anchor Bay Cave, also known as Scorpion Cave, is the best dive site in Anchor Bay. The cave is located on the south side of the bay, approximately 150 m from the entry/exit point at the concrete jetty",
+    },
+  }, 
 
-    { 
-      value: {
-        uid: "DM_00000asdf21",
-        slug: "diveshops/abc-diving",
-        category: "diveshops",
-        tags: ["rental", "guided diving", "courses"],
-        icon: "diveshop",
-        title: "ABC Diving",
-        excerpt: "Small, bespoke PADI dive centre set in an idyllic waterfront location",
-        image: "/jpg/ABCDiving/ABCDiving.jpg",
-        bodyFormat: "md",
-        body: "ABC Diving is a small, bespoke PADI dive centre set in an idyllic waterfront location at Turtle Bay just up from St Paul’s Bay in Malta.",
-      },
-    }, 
+    
     { 
       value: {
         uid: "DS_OC000asdf21",
@@ -170,28 +195,7 @@ const list = [
         body: mdBody_Octopus,
       },
     }, 
-    { 
-    value: {
-      uid: "ABC_000000001",
-      title: "The Um El Faroud wreck",
-      slug: "wreck-dives/umelfaroud",
-      category: "wreck dives",
-      tags: ["shore", "wreck"],
-      icon: "dive",
-      excerpt: "MV Um El Faroud was a Libyan oil tanker that was scuttled off the coast of Wied iz-Zurrieq in 1998 as an artificial reef and a scuba Dives attraction, after suffering damage in an explosion at the dry docks.",
-      image: "/jpg/UmElFaroud/UmElFaroud.jpg",
-      bodyFormat: "md",
-      body: mdBody_UmElFaroud,
-      links:[
-        {label: "wikipedia.org", value: "http://en.wikipedia.org/wiki/Um_El_Faroud" },
-        {label: "maltadives.com", value: "https://maltadives.com/sites/umelfaroud-wiedizzurrieq" },
-        {label: "wrecksite.eu", value: "http://www.wrecksite.eu/wreck.aspx?97698" },
-        {label: "teesbuiltships.co.uk", value: "http://www.teesbuiltships.co.uk/view.php?ref=170647" },
-        {label: "calypsosac.org", value: "http://www.calypsosac.org/um-el-faroud/" },
-      ],
-    },
-  },
-
+    
     { 
       value: {
         uid: "GM_000xyz0001",  
