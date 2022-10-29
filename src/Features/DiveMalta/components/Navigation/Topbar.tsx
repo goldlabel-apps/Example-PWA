@@ -58,6 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
 export default function Topbar() {
 
   const showSearch = false;

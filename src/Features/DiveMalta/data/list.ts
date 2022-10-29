@@ -1,4 +1,5 @@
 import {mdBody_Rozi} from "./md/mdBody_Rozi";
+import {mdBody_Rozi_ABC} from "./md/mdBody_Rozi_ABC";
 import {mdBody_DiveGuide} from "./md/mdBody_DiveGuide";
 import {mdBody_UmElFaroud} from "./md/mdBody_UmElFaroud";
 import {mdBody_Garmin} from "./md/mdBody_Garmin";
@@ -6,6 +7,63 @@ import {mdBody_Octopus} from "./md/mdBody_Octopus";
 import {mdBody_SOHOHike} from "./md/mdBody_SOHOHike";
 
 const list = [
+
+  { 
+    value: {
+      uid: "D_66RZ000002",
+      title: "Diving The Rozi with ABC Diving",
+      slug: "wreck-dives/rozi",
+      category: "wreck dives",
+      tags:["wreck", "shore", ],
+      icon: "dive",
+      excerpt: "Rozi is one of the two wrecks in Cirkewwa on the northwest side of Malta, and one of the most popular dive sites in the Maltese islands. Rozi was a former tugboat that operated in Grand Harbour of Valletta. She was scuttled in 1992 as an underwater tourist attraction for submarine tours, and also became an artificial reef for scuba divers. Tugboat Rozi wreck is easily dived from the shore, and is located close to Patrol Boat P29 wreck.",
+      image: "/jpg/The-Tugboat-Rozi/The-Tugboat-Rozi_uw.jpg",
+      bodyFormat: "html",
+      body: mdBody_Rozi_ABC,
+      links: [
+        {
+          label: "Wikipedia",
+          value: "https://en.wikipedia.org/wiki/MV_Rozi",
+        },
+        {
+          label: "Wrecksite.eu",
+          value: "https://www.wrecksite.eu/wreck.aspx?58012",
+        },
+        {
+          label: "Sketchfab 3d model",
+          value: "https://sketchfab.com/3d-models/mv-rozi-47a7541a59c8425e888db372739fce0f",
+        },
+      ],
+    },
+  },
+  { 
+    value: {
+      uid: "D_66RZ000002",
+      title: "History of the Rozi",
+      slug: "wreck-dives/rozi",
+      category: "wreck dives",
+      tags:["wreck", "shore", ],
+      icon: "dive",
+      excerpt: "Rozi is one of the two wrecks in Cirkewwa on the northwest side of Malta, and one of the most popular dive sites in the Maltese islands. Rozi was a former tugboat that operated in Grand Harbour of Valletta. She was scuttled in 1992 as an underwater tourist attraction for submarine tours, and also became an artificial reef for scuba divers. Tugboat Rozi wreck is easily dived from the shore, and is located close to Patrol Boat P29 wreck.",
+      image: "/jpg/The-Tugboat-Rozi/The-Tugboat-Rozi_Map.jpg",
+      bodyFormat: "md",
+      body: mdBody_Rozi,
+      links: [
+        {
+          label: "Wikipedia",
+          value: "https://en.wikipedia.org/wiki/MV_Rozi",
+        },
+        {
+          label: "Wrecksite.eu",
+          value: "https://www.wrecksite.eu/wreck.aspx?58012",
+        },
+        {
+          label: "Sketchfab 3d model",
+          value: "https://sketchfab.com/3d-models/mv-rozi-47a7541a59c8425e888db372739fce0f",
+        },
+      ],
+    },
+  },
 
   { 
     value: {
@@ -87,35 +145,6 @@ const list = [
     },
   },
 
-
-  { 
-    value: {
-      uid: "D_66RZ000002",
-      title: "The Tugboat Rozi",
-      slug: "wreck-dives/rozi",
-      category: "wreck dives",
-      tags:["wreck", "shore", ],
-      icon: "dive",
-      excerpt: "Rozi is one of the two wrecks in Cirkewwa on the northwest side of Malta, and one of the most popular dive sites in the Maltese islands. Rozi was a former tugboat that operated in Grand Harbour of Valletta. She was scuttled in 1992 as an underwater tourist attraction for submarine tours, and also became an artificial reef for scuba divers. Tugboat Rozi wreck is easily dived from the shore, and is located close to Patrol Boat P29 wreck.",
-      image: "/jpg/The-Tugboat-Rozi/The-Tugboat-Rozi_Map.jpg",
-      bodyFormat: "md",
-      body: mdBody_Rozi,
-      links: [
-        {
-          label: "Wikipedia",
-          value: "https://en.wikipedia.org/wiki/MV_Rozi",
-        },
-        {
-          label: "Wrecksite.eu",
-          value: "https://www.wrecksite.eu/wreck.aspx?58012",
-        },
-        {
-          label: "Sketchfab 3d model",
-          value: "https://sketchfab.com/3d-models/mv-rozi-47a7541a59c8425e888db372739fce0f",
-        },
-      ],
-    },
-  },
 
   { 
     value: {
